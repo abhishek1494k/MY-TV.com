@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard</title>
+    <link rel="stylesheet" href="./style/adminDashboard.css">
+</head>
+<body>
+    <h1>Admin Dashboard Page</h1>
+
+    <div id="main-container">
+        <div id="all-buttons">
+            <button id="show-all-movie">Show All Movies</button>
+            <hr>
+            <button>Add Movies</button>
+            <hr>
+            <button>Edit Movies</button>
+            <!-- <hr>
+            <button>Delete Movies</button> -->
+
+
+        </div>
+        <div id="show">
+            <div id="all-movies">
+                <div id="sort-and-search">
+                    <select name="sort" id="sorting-data">
+                        <option value="">Select</option>
+                        <option value="year">Sort by Year</option>
+                        <option value="rating">Sort by Rating</option>
+                    </select>
+                    <input type="text" id="search" placeholder="Search any Movie">
+                </div>
+                <div id="show-all-movies">
+                    <!-- <div>
+                        <img src="https://is3-ssl.mzstatic.com/image/thumb/vt7su-xCPQYO5Z-IftduYw/1478x832.webp" alt="">
+                         <h2>title</h2>
+                           <p>Release Year:2019</p>
+                           <p>Rating:8.2</p>
+                    </div> -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="./script/adminDashboard.js"></script>
