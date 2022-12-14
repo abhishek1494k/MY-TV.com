@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body{
+            text-align: center;
+            
+            
+        }
+        #main{
+            width: 20%;
+            height: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            justify-content: space-evenly;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border-radius: 5px;
+        }
+        input{
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid silver;
+        }
+        button{
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid silver;
+            background-color: darkblue;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <div id="main"> 
+            <input type="text" placeholder="Name" id="name"><br>
+            <input type="text" placeholder="Email" id="email"><br>
+            <input type="password" placeholder="Password" id="pass"><br>
+            <input type="number" placeholder="Enter Phone Number" id="mobileNo"><br>
+            <button onclick="myfun()">Sign Up</button>
+            <p> Already have an account?<a href="log-in.html">Log In</a></p>
+        
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let arr=JSON.parse(localStorage.getItem("data")) || [];
+      function myfun(){
+        let na,em,pa,mob;
+
+             if(document.querySelector("#name").value!=="" && document.querySelector("#name").value.length>3){
+                 na=document.querySelector("#name").value;
+             }
+            
+             if(document.querySelector("#email").value!=="" && document.querySelector("#email").value.length>10){
+                em=document.querySelector("#email").value;
+             }
+            
+             if(document.querySelector("#pass").value!=="" && document.querySelector("#pass").value.length>6){
+                 pa=document.querySelector("#pass").value;
+             }
+            
+             if(document.querySelector("#mobileNo").value!=="" && document.querySelector("#mobileNo").value.length>6){
+                 mob=document.querySelector("#mobileNo").value;
+             }
+
+             if(na==undefined || em==undefined || pa==undefined || mob==undefined){
+                alert("Invalid Details")
+             }else{
+                let obj={
+                na,
+                em,
+                pa,
+                mob
+             };
+
+             arr.push(obj);
+             localStorage.setItem("data",JSON.stringify(arr));
+             document.querySelector("#name").value="";
+             document.querySelector("#email").value="";
+             document.querySelector("#pass").value="";
+             document.querySelector("#mobileNo").value="";
+             window.location.assign("log-in.html")
+             alert("Sign Up Successful");
+             }      
+      }
+</script>
