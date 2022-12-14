@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search page</title>
+    <link rel="stylesheet" href="./style/search_page.css">
+</head>
+<body>
+    <div id="nav-bar">
+       <div>
+        <h2>MY >Tv</h2>
+       </div>
+        <div id="all_function">
+            <select name="Sort Movies" id="sort" onchange="sortfun()">
+                <option value="Highest Rating">Highest Rating</option>
+                <option value="Length">Length</option>
+                <option value="Year">Year</option>
+                </select>
+                <select name="" id="filt" onchange="filterfun()">
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English, Hindi">English, Hindi</option>
+                    <option value="Spanish">Spanish</option>
+                
+                   </select>
+        
+                   <input type="text" placeholder="Search Movies" oninput="search()" id="valu">
+        </div>
+        
+    </div>
+    
+    <h2>Movies/Web-Series</h2>
+    <div id="container">
+        
+    </div>
+</body>
+
+<script src="./script/search_page.js"></script>
+</html>

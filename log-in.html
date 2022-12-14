@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        body{
+            text-align: center;
+            
+            
+        }
+        #main{
+            width: 20%;
+            height: 250px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            justify-content: space-evenly;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border-radius: 5px;
+        }
+        input{
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid silver;
+        }
+        button{
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid silver;
+            background-color: darkblue;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Log In</h1>
+    <div id="main"> 
+            
+            <input type="text" placeholder="Email" id="email"><br>
+            <input type="password" placeholder="Password" id="pass"><br>
+            
+            <button onclick="myfun()">Log In</button>
+            <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+        
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let Details=JSON.parse(localStorage.getItem("data")) || [];
+      function myfun(){
+        let email,pass;
+
+        email=document.querySelector("#email").value;
+        pass=document.querySelector("#pass").value;
+             let count=0;
+            Details.forEach(element => {
+
+                if(email==element.em && pass==element.pa){
+                   count++;
+                }
+                
+             });
+             if(count>0){
+                window.location.assign("index.html")
+                alert("Sign Up Successful");
+             }else{
+                alert("Wrong Credentials")
+             }
+             document.querySelector("#email").value="";
+             document.querySelector("#pass").value="";
+             }      
+      
+</script>
