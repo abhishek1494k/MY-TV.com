@@ -1,5 +1,9 @@
 let showMoviesBtn=document.querySelector("#show-all-movie")
 let sortAndSearch=document.querySelector("#sort-and-search")
+let showallmovies=document.querySelector("#show-all-movies")
+let allMovies=document.getElementById("all-movies")
+let addMoviesbtn=document.getElementById("addMovie")
+let addMovies=document.getElementById("add-movies")
 
 let bag=[]
 showMoviesBtn.addEventListener("click",async function(){
@@ -8,6 +12,8 @@ showMoviesBtn.addEventListener("click",async function(){
         if(res.ok){
             let data=await res.json()
             bag=[...data]
+            allMovies.style.display="block"
+            addMovies.style.display="none"
             display(data)
             sortedData(data)
             searchMovies(data)
@@ -16,7 +22,7 @@ showMoviesBtn.addEventListener("click",async function(){
         alert(error)
     }
 })
-let showallmovies=document.querySelector("#show-all-movies")
+
 
 function display(data){
     // console.log(data)
@@ -36,8 +42,7 @@ function display(data){
         deleteBtn.addEventListener("click",function(event){
                 console.log(event.target.dataset.id)
          })
-    }
-//   
+    }   
 
 }
 
@@ -89,3 +94,31 @@ function searchMovies(data){
     })
     
 }
+
+let inputForm=document.querySelectorAll("#input-form input")
+
+addMoviesbtn.addEventListener("click",function(){
+    allMovies.style.display="none"
+    addMovies.style.display="block"
+    let obj={}
+    let formofinputs=document.querySelector("#input-form")
+    formofinputs.addEventListener("submit",async function(event){
+        event.preventDefault();
+        for(let i=0;i<inputForm.length-1;i++){
+            obj[inputForm[i].id]=inputForm[i].value 
+         }
+         console.log(obj)
+         let res=await fetch("https://63986336044fa481d69b935b.mockapi.io/movie",{
+            method : "POST",
+            headers :{
+                "Content-Type" : "application/json"
+            },
+            body : JSON.stringify(obj)
+         })
+
+         for(let i=0;i<inputForm.length-1;i++){
+           inputForm[i].value =""
+         }
+    })
+    
+})
