@@ -8,12 +8,16 @@
     <style>
         body{
             text-align: center;
-            
+           
+            background-image: linear-gradient(rgba(10, 10, 10, 0.851),rgba(10, 10, 10, 0.851)), url(./media/background.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
             
         }
-        #main{
+        #login{
             width: 20%;
-            height: 250px;
+            height: 400px;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -21,38 +25,78 @@
             justify-content: space-evenly;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             border-radius: 5px;
+            background-color: black;
+            margin-top: 150px;
         }
         input{
             height: 30px;
             border-radius: 5px;
             border: 1px solid silver;
+            background-color: black;
+            color:silver;
+            margin: 20px;
+            width: 90%;
+            padding: 0px 8px;
         }
-        button{
-            height: 30px;
-            border-radius: 5px;
-            border: 1px solid silver;
-            background-color: darkblue;
-            color: white;
+        
+        
+        p{
+            color: silver;
+        }
+        a{
+            color: red;
+        }
+        h1{
+            color: silver;
         }
 
     </style>
 </head>
 <body>
-    <h1>Log In</h1>
-    <div id="main"> 
-            
-            <input type="text" placeholder="Email" id="email"><br>
-            <input type="password" placeholder="Password" id="pass"><br>
-            
-            <button onclick="myfun()">Log In</button>
+    
+    <div id="login"> 
+        <h1>Log In</h1>
+            <form action="" autocomplete="on">
+                <input type="text" placeholder="Email" id="email" required><br>
+                <input type="password" placeholder="Password" id="pass" required><br>
+                <input type="submit" value="Log In">
+            </form>
             <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
         
     </div>
     
 </body>
 </html>
-
 <script>
+    document.querySelector("#login form").addEventListener("submit",loginfun);
+async function loginfun(event){
+    try {
+        event.preventDefault();
+        let all_login = document.querySelectorAll("#login input");
+        let object= {
+            ["email"]: all_login[0].value,
+            ["password"] : all_login[1].value
+        }
+        console.log(object);
+        let login_req = await fetch("https://639889b9044fa481d6a154f8.mockapi.io/user",{
+            method : "POST",
+            body : JSON.stringify(object),
+            headers : {
+                "Content-Type" : "application/json"
+            }
+        });
+        if(login_req.ok){
+            alert("User has been successfully Logged In");
+            window.location.assign("index.html");
+        }else{
+            alert("user not found.")
+        }
+    } catch (error) {
+        alert("err in login")
+    }
+}
+</script>
+<!-- <script>
     let Details=JSON.parse(localStorage.getItem("data")) || [];
       function myfun(){
         let email,pass;
@@ -77,4 +121,4 @@
              document.querySelector("#pass").value="";
              }      
       
-</script>
+</script> -->
