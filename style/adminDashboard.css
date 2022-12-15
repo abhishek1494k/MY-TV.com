@@ -1,8 +1,39 @@
 body{
-    background-color: black;
-    color: white;
+    margin: 0;
+    padding: 0;
 }
-
+#navbar{
+    background-color: black;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+#logo{
+    margin-left: 3%;
+    height: 60px;
+}
+#user-logo{
+    margin-left: 85%;
+    /* height: 3% */
+}
+#qs-image{
+    height: 35px;
+    margin-top: 10px;
+    color: black;
+}
+#user-btn{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    background-color: skyblue;
+    border: none;
+    border-radius: 50%;
+    font-size: 19px;
+    font-weight: bold;
+}
 #main-container{
     height: 600px;
     width: 95%;
@@ -10,35 +41,44 @@ body{
     margin-left: 30px;
     display: flex;
 }
-h1{
+#admin{
     margin-left: 40px;
     color: #25725b;
+    position: fixed;
 }
 #all-buttons{
-    height: auto;
+    height: 100%;
     width: 20%;
-    /* border: 1px solid blue; */
-    margin: 10px;
+    border-right: 3px solid grey;
+    margin-top: 70px;
     position: fixed;
 }
 #show{
     height: 90%;
     width: 75%;
     /* border: 1px solid blue; */
-    margin: 10px;
     margin-left: 25%;
+    margin-top: 60px;
 }
 #all-buttons hr{
     width: 80%;
-    border: 1px solid yellow;
+    border: 1px solid grey;
 }
 #all-buttons button{
     height: 30px;
     width: 80%;
-    margin: 20px;
+    margin: 10px 0px 10px 0px;
     border: none;
-    background-color:#25725b;
-    color: white;
+    background-color:white;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 7px;
+    
+}
+#all-buttons button:hover{
+    background-color:#ECEFF1;
+    cursor: pointer;
 }
 #show-all-movies{
     display: grid;
@@ -47,13 +87,15 @@ h1{
 }
 #show-all-movies div{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: 1px solid yellow;
+    border-radius: 10px;
     margin: 10px;
     padding-bottom: 10px;
 }
 #show-all-movies img{
     width: 100%;
     height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 #show-all-movies h2,#show-all-movies p{
     margin-left: 10px;
@@ -67,13 +109,14 @@ h1{
     height: 35px;
     width: 200px;
     margin-right: 50px;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 #search{
     height: 30px;
     width: 300px;
     margin-right: 30px;
-    border-radius: 5px;
+    border-radius: 7px;
+    
 }
 .delete-btn{
     margin-left: 60%;
@@ -81,6 +124,32 @@ h1{
     color: white;
     height: 25px;
     width: 80px;
+    border-radius: 7px;
+    border: none;
+}
+
+
+#all-movies{
+    display: none;
+}
+#add-movies{
+    display: none;
+}
+#input-form input{
+    /* margin-left: 30%; */
+    margin: 20px 0px 0px 25%;
+    height: 30px;
+    width: 50%;
+    border-radius: 7px;
+    
+}
+#input-form input[type="submit"]{
+    width: 20%;
+    margin-left: 42%;
+    background-color: #25725b;
+    border: none;
+    color: white;
+
 }
 @media all and (min-width:768px) and (max-width:1024px){
     #main-container{
@@ -89,13 +158,17 @@ h1{
         border: 1px solid white;
         display: flex;
     }
-    h1{
+    #admin{
         margin-left: 40px;
     }
     #show-all-movies{
         display: grid;
         grid-template-columns: repeat(2,1fr);
     
+    }
+    #user-logo{
+        margin-left: 70%;
+        /* height: 3% */
     }
 }
 @media all and (min-width:320px) and (max-width:767px){
@@ -124,17 +197,29 @@ h1{
         margin-top: 90px;
     }
     #sorting-data{
-        width: 90%;
-        margin: 10px;
+        width: 50%;
+       /* margin-left: 0%; */
     }
     #search{
-        margin: 10px;
+        width: 80%;
+        /* margin-left: 20%; */
     }
     #show{
-        height: 90%;
+        height: auto;
         width: 75%;
-        border: 1px solid blue;
         margin: 10px;
+        margin-top: 50%;
         
+    }
+    #input-form input{
+       
+        margin: 10px 0px 20px 5%;
+        height: 30px;
+        width: 90%;
+        border-radius: 7px;
+    }
+    #user-logo{
+        margin-left: 50%;
+        /* height: 3% */
     }
 }

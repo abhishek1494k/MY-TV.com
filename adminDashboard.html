@@ -8,21 +8,32 @@
     <link rel="stylesheet" href="./style/adminDashboard.css">
 </head>
 <body>
-    <h1>Admin Dashboard Page</h1>
+    <!-- <h2 id="admin">Admin Dashboard Page</h2> -->
+    <div id="navbar">
+        <div id="logo">
+            <img height="60px" src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg" alt="">
+        </div>
+        <div id="user-logo">
+            <!-- <img id="qs-image" src="https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-bell-icon-png-image_927119.jpg" alt=""> -->
+            <button id="user-btn">A</button>
+        </div>
+        
+    </div>
 
     <div id="main-container">
         <div id="all-buttons">
             <button id="show-all-movie">Show All Movies</button>
             <hr>
-            <button>Add Movies</button>
+            <button id="addMovie">Add Movies</button>
             <hr>
             <button>Edit Movies</button>
-            <!-- <hr>
-            <button>Delete Movies</button> -->
-
-
+            <hr>
+            <button>Discounts</button>
+            <hr>
+            <button>Gift cards</button>
         </div>
         <div id="show">
+           
             <div id="all-movies">
                 <div id="sort-and-search">
                     <select name="sort" id="sorting-data">
@@ -41,6 +52,38 @@
                     </div> -->
 
                 </div>
+            </div>
+            <div id="add-movies">
+                <form action="" id="input-form">
+                    <input type="text" id="name" placeholder="Enter Movie Name" required>
+                    <br>
+                    <input type="text" id="language" placeholder="Enter Movie Language" required>
+                    <br>
+                    <input type="text" id="genre" placeholder="Enter movie genre" required>
+                    <br>
+                    <input type="text" id="poster" placeholder="Poster Image url" required>
+                    <br>
+                    <input type="text" id="img1" placeholder="Image-1 url" required>
+                    <br>
+                    <input type="text" id="img2" placeholder="Image-2 url" required>
+                    <br>
+                    <input type="text" id="img3" placeholder="Image-3 url" required>
+                    <br>
+                    <input type="text" id="img4" placeholder="Image-4 url" required>
+                    <br>
+                    <input type="number" id="year" placeholder="Movie Release Year" required>
+                    <br>
+                    <input type="number" id="rating" step="0.01" placeholder="Movie rating" required>
+                    <br>
+                    <input type="number" id="length" placeholder="Length of the movie" required>
+                    <br>
+                    <input type="text" id="description" placeholder="Description of movie">
+                    <br>
+                    <input type="submit">
+
+                </form>
+                  
+
             </div>
 
         </div>
