@@ -2,6 +2,7 @@ async function getdata() {
     let response = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
     // let response = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
     let data = await response.json();
+    console.log(data)
     renderDom(data)
    
 }
