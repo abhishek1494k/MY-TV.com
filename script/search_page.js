@@ -1,4 +1,4 @@
-let url = "https://63986336044fa481d69b935b.mockapi.io/movie";
+let url = "https://63986336044fa481d69b935b.mockapi.io/mytv";
 let bag=[];
 async function getdata(){
     try {
@@ -15,6 +15,9 @@ function display(out){
     document.querySelector("#container").innerHTML="";
     out.forEach((elem) => {
         let di= document.createElement("div");
+        di.addEventListener("click",()=>{
+            console.log("ok its working");
+        })
         let im=document.createElement("img");
         im.setAttribute("src",elem.poster);
         di.append(im);
@@ -55,3 +58,8 @@ function search(){
     });
     display(newdata);
 }
+
+function logofun(){
+    window.location.assign("index.html");
+}
+

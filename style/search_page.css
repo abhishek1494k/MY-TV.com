@@ -6,6 +6,10 @@
     margin: 20px 10px;
     
    }
+   *{
+    margin: 0;
+    padding: 0;
+   }
    #container>div{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 5px;
@@ -36,7 +40,13 @@
     justify-content: space-between;
     align-items: center;
     
+    background-color: black;
+    
   }
+  #nav-bar>div>img{
+    height: 65px;
+    margin-left: 40px;
+   }
   #all_function>input{
     width: 30%;
     height: 25px;
@@ -53,6 +63,7 @@
     background-color: black;
     color: white;
   }
+ 
 
   @media all and (min-width:551px) and (max-width:768px){
     #container{
