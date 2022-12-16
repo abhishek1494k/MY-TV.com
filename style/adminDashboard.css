@@ -16,7 +16,7 @@ body{
     height: 60px;
 }
 #user-logo{
-    margin-left: 85%;
+    margin-left: 80%;
     /* height: 3% */
 }
 #qs-image{
@@ -33,6 +33,16 @@ body{
     border-radius: 50%;
     font-size: 19px;
     font-weight: bold;
+}
+#logout{
+    height: 30px;
+    width: 80px;
+    margin-left: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
 }
 #main-container{
     height: 600px;
@@ -67,17 +77,19 @@ body{
 #all-buttons button{
     height: 30px;
     width: 80%;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 20px;
     border: none;
     background-color:white;
     color: black;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 20px;
     border-radius: 7px;
+    text-align: start;
     
 }
 #all-buttons button:hover{
-    background-color:#ECEFF1;
+    background-color:black;
+    color: white;
     cursor: pointer;
 }
 #show-all-movies{
@@ -107,19 +119,27 @@ body{
 }
 #sorting-data{
     height: 35px;
-    width: 200px;
+    width: 120px;
     margin-right: 50px;
     border-radius: 7px;
 }
 #search{
     height: 30px;
-    width: 300px;
+    width: 200px;
     margin-right: 30px;
     border-radius: 7px;
     
 }
+.edit-btn{
+    margin-left: 10px;
+    background-color: skyblue;
+    height: 25px;
+    width: 40%;
+    border: none;
+    border-radius: 7px;
+}
 .delete-btn{
-    margin-left: 60%;
+    margin-left: 30px;
     background-color: red;
     color: white;
     height: 25px;
@@ -135,7 +155,18 @@ body{
 #add-movies{
     display: none;
 }
+#edit-movies{
+    display: none;
+}
 #input-form input{
+    /* margin-left: 30%; */
+    margin: 20px 0px 0px 25%;
+    height: 30px;
+    width: 50%;
+    border-radius: 7px;
+    
+}
+#edit-form input{
     /* margin-left: 30%; */
     margin: 20px 0px 0px 25%;
     height: 30px;
@@ -149,7 +180,15 @@ body{
     background-color: #25725b;
     border: none;
     color: white;
-
+    margin-bottom: 30px;
+}
+#edit-form input[type="submit"]{
+    width: 20%;
+    margin-left: 42%;
+    background-color: #25725b;
+    border: none;
+    color: white;
+    margin-bottom: 30px;
 }
 @media all and (min-width:768px) and (max-width:1024px){
     #main-container{
@@ -169,6 +208,28 @@ body{
     #user-logo{
         margin-left: 70%;
         /* height: 3% */
+    }
+    .edit-btn{
+        margin-left: 10px;
+        background-color: skyblue;
+        height: 25px;
+        width: 80px;
+        border: none;
+        border-radius: 7px;
+    }
+    .delete-btn{
+        margin-left: 70px;
+        background-color: red;
+        color: white;
+        height: 25px;
+        width: 80px;
+        border-radius: 7px;
+        border: none;
+    }
+    #all-buttons button:hover{
+        background-color:black;
+        color: white;
+        cursor: pointer;
     }
 }
 @media all and (min-width:320px) and (max-width:767px){
@@ -218,8 +279,29 @@ body{
         width: 90%;
         border-radius: 7px;
     }
+    #edit-form input{
+        margin: 10px 0px 20px 5%;
+        height: 30px;
+        width: 90%;
+        border-radius: 7px;
+        
+    }
     #user-logo{
-        margin-left: 50%;
+        margin-left: 30%;
         /* height: 3% */
+    }
+    #logout{
+        height: 30px;
+        width: 80px;
+        margin-left: 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 10px;
+    }
+    #all-buttons button:hover{
+        background-color:black;
+        color: white;
+        cursor: pointer;
     }
 }
