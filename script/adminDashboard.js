@@ -4,7 +4,7 @@ let sortAndSearch=document.querySelector("#sort-and-search")
 let bag=[]
 showMoviesBtn.addEventListener("click",async function(){
     try {
-        let res=await fetch("https://63986336044fa481d69b935b.mockapi.io/movie")     
+        let res=await fetch("https://63986336044fa481d69b935b.mockapi.io/mytv")     
         if(res.ok){
             let data=await res.json()
             bag=[...data]

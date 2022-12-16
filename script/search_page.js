@@ -1,4 +1,4 @@
-let url = "https://63986336044fa481d69b935b.mockapi.io/movie";
+let url = "https://63986336044fa481d69b935b.mockapi.io/mytv";
 let bag=[];
 async function getdata(){
     try {
