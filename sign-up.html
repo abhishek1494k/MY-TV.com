@@ -8,51 +8,72 @@
     <style>
         body{
             text-align: center;
-            
+           
+            background-image: linear-gradient(rgba(10, 10, 10, 0.851),rgba(10, 10, 10, 0.851)), url(./media/background.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
             
         }
         #main{
             width: 20%;
-            height: 400px;
+            height: 500px;
             margin: auto;
             display: flex;
             flex-direction: column;
-            padding: 50px;
+            padding: 30px 50px;
             justify-content: space-evenly;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             border-radius: 5px;
+            background-color: black;
+            margin-top: 150px;
         }
         input{
-            height: 30px;
+            height: 35px;
             border-radius: 5px;
             border: 1px solid silver;
+            background-color: black;
+            color:silver;
+            margin: 10px;
+            width: 90%;
+            padding: 0px 8px;
         }
-        button{
-            height: 30px;
-            border-radius: 5px;
-            border: 1px solid silver;
-            background-color: darkblue;
-            color: white;
+        
+        
+        p{
+            color: silver;
         }
-
+        a{
+            color: red;
+        }
+        h1{
+            color: silver;
+        }
+       
     </style>
 </head>
 <body>
-    <h1>Sign Up</h1>
+    
     <div id="main"> 
-            <input type="text" placeholder="Name" id="name"><br>
-            <input type="text" placeholder="Email" id="email"><br>
-            <input type="password" placeholder="Password" id="pass"><br>
-            <input type="number" placeholder="Enter Phone Number" id="mobileNo"><br>
-            <button onclick="myfun()">Sign Up</button>
+        <h1>Sign Up</h1>
+        <form action="" autocomplete="on">
+            <input type="text" placeholder="Name" id="name" required><br>
+            <input type="text" placeholder="Email" id="email" required><br>
+            <input type="password" placeholder="Password" id="pass" required><br>
+            <input type="number" placeholder="Enter Phone Number" id="mobileNo" required><br>
+            <input type="submit" value="Sign Up">
+        </form>
+
             <p> Already have an account?<a href="log-in.html">Log In</a></p>
         
     </div>
+
+    
     
 </body>
 </html>
-
-<script>
+<script src="./script/sign-up.js"></script>
+<!-- <script>
     let arr=JSON.parse(localStorage.getItem("data")) || [];
       function myfun(){
         let na,em,pa,mob;
@@ -93,4 +114,4 @@
              alert("Sign Up Successful");
              }      
       }
-</script>
+</script> -->
