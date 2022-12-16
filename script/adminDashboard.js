@@ -108,7 +108,7 @@ addMoviesbtn.addEventListener("click",function(){
             obj[inputForm[i].id]=inputForm[i].value 
          }
          console.log(obj)
-         let res=await fetch("https://63986336044fa481d69b935b.mockapi.io/movie",{
+         let res=await fetch("https://63986336044fa481d69b935b.mockapi.io/mytv",{
             method : "POST",
             headers :{
                 "Content-Type" : "application/json"
