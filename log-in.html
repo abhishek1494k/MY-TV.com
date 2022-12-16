@@ -24,19 +24,20 @@
             padding: 50px;
             justify-content: space-evenly;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-            border-radius: 5px;
+            border-radius: 10px;
             background-color: black;
             margin-top: 150px;
         }
         input{
-            height: 30px;
+            height: 40px;
             border-radius: 5px;
             border: 1px solid silver;
             background-color: black;
             color:silver;
-            margin: 20px;
-            width: 90%;
-            padding: 0px 8px;
+            margin-top: 40px;
+            width: 85%;
+            padding: 0px 20px;
+            font-size: 17px;
         }
         
         
@@ -47,7 +48,11 @@
             color: red;
         }
         h1{
-            color: silver;
+            color: #3c00a0;
+        }
+        #sub{
+            width: 35%;
+            background-color: #3c00a0;
         }
 
     </style>
@@ -59,7 +64,7 @@
             <form action="" autocomplete="on">
                 <input type="text" placeholder="Email" id="email" required><br>
                 <input type="password" placeholder="Password" id="pass" required><br>
-                <input type="submit" value="Log In">
+                <input type="submit" value="Log In" id="sub">
             </form>
             <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
         
@@ -67,7 +72,7 @@
     
 </body>
 </html>
-<script>
+<!-- <script>
     document.querySelector("#login form").addEventListener("submit",loginfun);
 async function loginfun(event){
     try {
@@ -95,9 +100,10 @@ async function loginfun(event){
         alert("err in login")
     }
 }
-</script>
-<!-- <script>
+</script> -->
+<script>
     let Details=JSON.parse(localStorage.getItem("data")) || [];
+    document.querySelector("#login form").addEventListener("submit",myfun);
       function myfun(){
         let email,pass;
 
@@ -121,4 +127,4 @@ async function loginfun(event){
              document.querySelector("#pass").value="";
              }      
       
-</script> -->
+</script>

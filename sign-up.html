@@ -25,7 +25,7 @@
             justify-content: space-evenly;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             border-radius: 5px;
-            background-color: black;
+            background-color: rgb(51,51,51);
             margin-top: 150px;
         }
         input{
@@ -34,9 +34,10 @@
             border: 1px solid silver;
             background-color: black;
             color:silver;
-            margin: 10px;
-            width: 90%;
-            padding: 0px 8px;
+            margin-top: 30px;
+            width: 85%;
+            padding: 0px 20px;
+            font-size: 17px;
         }
         
         
@@ -47,7 +48,11 @@
             color: red;
         }
         h1{
-            color: silver;
+            color: cornflowerblue;
+        }
+        #sub{
+            width: 35%;
+            background-color: cornflowerblue;
         }
        
     </style>
@@ -61,7 +66,7 @@
             <input type="text" placeholder="Email" id="email" required><br>
             <input type="password" placeholder="Password" id="pass" required><br>
             <input type="number" placeholder="Enter Phone Number" id="mobileNo" required><br>
-            <input type="submit" value="Sign Up">
+            <input type="submit" value="Sign Up" id="sub">
         </form>
 
             <p> Already have an account?<a href="log-in.html">Log In</a></p>
@@ -73,45 +78,3 @@
 </body>
 </html>
 <script src="./script/sign-up.js"></script>
-<!-- <script>
-    let arr=JSON.parse(localStorage.getItem("data")) || [];
-      function myfun(){
-        let na,em,pa,mob;
-
-             if(document.querySelector("#name").value!=="" && document.querySelector("#name").value.length>3){
-                 na=document.querySelector("#name").value;
-             }
-            
-             if(document.querySelector("#email").value!=="" && document.querySelector("#email").value.length>10){
-                em=document.querySelector("#email").value;
-             }
-            
-             if(document.querySelector("#pass").value!=="" && document.querySelector("#pass").value.length>6){
-                 pa=document.querySelector("#pass").value;
-             }
-            
-             if(document.querySelector("#mobileNo").value!=="" && document.querySelector("#mobileNo").value.length>6){
-                 mob=document.querySelector("#mobileNo").value;
-             }
-
-             if(na==undefined || em==undefined || pa==undefined || mob==undefined){
-                alert("Invalid Details")
-             }else{
-                let obj={
-                na,
-                em,
-                pa,
-                mob
-             };
-
-             arr.push(obj);
-             localStorage.setItem("data",JSON.stringify(arr));
-             document.querySelector("#name").value="";
-             document.querySelector("#email").value="";
-             document.querySelector("#pass").value="";
-             document.querySelector("#mobileNo").value="";
-             window.location.assign("log-in.html")
-             alert("Sign Up Successful");
-             }      
-      }
-</script> -->
