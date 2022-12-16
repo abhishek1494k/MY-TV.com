@@ -1,21 +1,98 @@
+/* *{
+  background-color: black;
+} */
+.card1,.card2,.card3,.card5,.card6,.card7,.card4,.card8 {
+  margin: auto;
+  width: 90%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  background-color: rgb(52, 52, 52);
+}
+.card4>div{
+    display: flex;
+    flex-direction: column; 
+    background-color: rgb(52, 52, 52);
+}
+
+.card1>div>img:hover,.card2>div>img:hover,.card2>div>img:hover,.card3>div>img:hover,.card4>div>img:hover,.card5>div>img:hover,.card6>div>img:hover,.card7>div>img:hover{
+  width:103%;
+  filter:brightness(100%);
+  border-top: 4px solid white;
+}
+
+.card2>div>img,.card1>div>img,.card3>div>img,.card24>div>img,.card5>div>img,.card6>div>img,.card7>div>img{
+  filter: brightness(85%);
+  transition: filter 1.5s;
+  transition-duration: 0.5s;
+}
+
+.card1 img,.card2 img,.card3 img,.card4 img,.card5 img,.card6 img,.card7 img,.card8 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: rgb(52, 52, 52);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card1 button{
+  background-color: rgb(0, 0, 0);
+}
+/* .card1, .card2 {
+  background-color: black;
+  border-radius: 15px;
+} */
 .container_2{
-    margin: auto;
-    width:100%;
-    height:auto;
-    background-color: rgb(50, 49, 49);
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: auto;
-    gap: 20px;
+    background-color: rgb(52, 52, 52);
+    padding-top: 20px;
+}
+.container_2>h4{
+    color:white;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+p{
+    color:white;
 }
 
-.container_2 div img{
-    width: 100%;
-    height: 100%;
-    border-radius:15px;
-}
 
-.container_2>div{
-    background-color: black;
-    border-radius:15px;
+/* =========================== */
+#new_navbar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+}
+#search_login a{
+  background-color: cornflowerblue;
+  color: white;
+  font-size: medium;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#search_login a:hover{
+  background-color: rgb(134, 171, 240);
+  padding: 8px 15px;
+}
+#new_navbar div{
+  color:white;
+  text-decoration: none;
+}
+#details{
+  width: 100%;
+  height: 2000px;
+  border: 1px solid black;
+  background-color: white;
+}
+#new_navbar div{
+  margin: 0 20px;
 }

@@ -1,0 +1,126 @@
+#first-part{
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50px;
+}
+#footer2{
+    height: auto;
+    width: 75%;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+#part-1 button{
+    height: 50px;
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+}
+#part-1 p{
+    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#part-2 p{
+    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#part-3 p{
+    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#part-4 p{
+    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#part-5 p{
+    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#part-6 p{
+    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#part-7 p{
+    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#part-2 button{
+    height: 50px;
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+}
+#part-3 button{
+    height: 50px;
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+}
+#part-4 button{
+    height: 50px;
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+}
+#part-5 button{
+    height: 50px;
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+}
+#part-6 button{
+    height: 50px;
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+    outline-style: none;
+    outline: none;;
+}
+#part-7 button{
+    height: 50px;
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+}
+
+#p1,#p2,#p3,#p4,#p5,#p6,#p7{
+    color:rgb(255, 255, 255);
+    line-height: 38px;
+}
+#footer_main{
+    background-color: black;
+}
+
+#part-1>#btn1,#part-2>#btn2,#part-3>#btn3,#part-4>#btn4,#part-5>#btn5,#part-6>#btn6,#part-7>#btn7{
+    background-color: black;
+    color:white;
+    outline:none;
+    border:none;
+}
+hr{
+    width:80%;
+    margin: auto;
+}
+.hr{
+    width:99%;
+}
