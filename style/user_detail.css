@@ -7,6 +7,15 @@ body{
     background-color: #28313B
     ;
 }
+#mylogo{
+  
+    width: 5%;
+    margin: auto;
+}
+#mylogo img{
+    width: 100%;
+}
+
 #main{
     display: flex;
   text-align: center;

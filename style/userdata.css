@@ -1,48 +1,31 @@
 *{
     font-family: serif;
+    box-sizing: border-box;
+    margin: 0;
 }
 body {
-  background: rgb(228, 175, 205);
-  background: -moz-radial-gradient(
-    circle,
-    rgba(228, 175, 205, 1) 1%,
-    rgba(238, 174, 202, 1) 31%,
-    rgba(148, 187, 233, 1) 100%
-  );
-  background: -webkit-radial-gradient(
-    circle,
-    rgba(228, 175, 205, 1) 1%,
-    rgba(238, 174, 202, 1) 31%,
-    rgba(148, 187, 233, 1) 100%
-  );
-  background: radial-gradient(
-    circle,
-    rgba(228, 175, 205, 1) 1%,
-    rgba(238, 174, 202, 1) 31%,
-    rgba(148, 187, 233, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e4afcd",endColorstr="#94bbe9",GradientType=1);
-}
+  background:white;
+  }
 #userdata {
-  /* border: 2px solid red; */
+
   display: flex;
-  width: 90%;
-  margin: auto;
+  
+ 
 }
 .leftside {
+  padding-top: 1.5%;
   width: 20%;
   height: auto;
-
-  background: white;
-  /* flex: 0.5; */
-  /* border: 2px solid blue; */
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  background: black;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .leftside div {
-  margin: 10px;
+  margin-bottom:50px ;
+  margin: auto;
   width: 50%;
 }
 .leftside div button {
+  margin-top: 20%;
   justify-content: center;
   margin-bottom: 50px;
   width: 100%;
@@ -54,15 +37,19 @@ body {
   width: 80%;
 }
 .top-sec {
+  background-color: black;
+  height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
-
-  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
+.top-sec h2:hover{
+  cursor: pointer;
+ 
+}
 .mid-sec {
   justify-content: space-between;
   margin: auto;
@@ -108,8 +95,10 @@ body {
 }
 select{
     font-size: 1rem;
-    background-color: #00BFFF;
+    background-color:black;
     color: white;
+    padding: 6px 10px 6px 10px ;
+    border-radius: 10px;
 }
 #userSearch {
   background: #fff;
@@ -144,7 +133,20 @@ select{
 }
 .leftside div button:hover{
     cursor: pointer;
-    font-size: 20px;
+    background-color:#ECEFF1;
+}
+#pagination{
+  margin: 2% 0 10% 0;
+  text-align: center;
+ 
+}
+#pagination button{
+  border:none;
+  border-radius: 10px;
+  background-color: #555555;
+  color: white;
+  margin-left:10px;
+padding: 6px 25px 6px 25px;
 }
 
 @media all and (min-width:768px) and (max-width:1024px){
