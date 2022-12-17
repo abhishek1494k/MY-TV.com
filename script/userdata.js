@@ -1,10 +1,10 @@
+// import details_dom from '../script/user_detail.js'
+
+
 let api = `https://639889b9044fa481d6a154f8.mockapi.io/user`;
 
 let midsec = document.querySelector(".mid-sec");
 
-
-let tempdiv = document.getElementById("tempdiv");
- 
 let temp = []
 
 async function fetchuserdata() {
@@ -12,10 +12,9 @@ async function fetchuserdata() {
     let res = await fetch(api);
     let data = await res.json();
     temp = data;
-    console.log(data)
-    // renderDom(data);
+    
     create_btn(data.length,10)
-    // console.log(data)
+    
   }
   catch (error) {
     console.log("error")
@@ -30,18 +29,51 @@ function renderDom(data) {
       // data.length = 10;
       return `
             <div id="tempdiv">
-            <img src="${ele.image}" alt="">
-                <p>${ele.name}</p>
-                <p>${ele.email}</p>
-               <button class="details_btn" data-id=${ele.id}>Details</button></div>
-               <hr>
+            <img class="imgNE" src="${ele.image}" alt="">
+                <p class="imgNE">${ele.name}</p>
+                <p class="imgNE">${ele.email}</p>              
+                <button class="details_btn" data-id=${ele.id}>DETAILS</button>
+                <button class="delete_btn" data-id=${ele.id}>REMOVE</button></div>
+                <hr>
                 `
     })
     .join("")}`;
 
+    let detail_button = document.querySelectorAll(".details_btn");
+  for (let dbtn of detail_button) {
+    dbtn.addEventListener("click", function (event) {
+      let id = event.target.dataset.id
+      window.location.href='user_detail.html'
+      // Detailsofuser(id)
+      
+      })
+  }
+
   
-}
-let details_btn = document.querySelector(".details_btn");
+    let delete_button = document.querySelectorAll(".delete_btn");
+  for (let dbtn of delete_button) {
+    dbtn.addEventListener("click", function (event) {
+      let id = event.target.dataset.id
+      deleteitem(id)
+      
+      })
+  }
+  
+ }
+// updating data for user details page
+// async function Detailsofuser(id) {
+//   let res = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user/${id}`,{
+//     method: "PUT",
+//     body: JSON.stringify(id),
+//     headers: {
+//       'Content-Type':'application/json'
+//     },
+//   })
+//   let data = await res.json();
+//   console.log(data,"updated user data")
+//   window.location.href="user_detail.html"
+// }
+
 
 async function deleteitem(id) {
   let res = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user/${id}`, {
@@ -49,8 +81,8 @@ async function deleteitem(id) {
   })
   if (res.ok) {
     alert("Deleted Sucessfully");
-    let refresh = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
-    let data = await refresh.json();
+    let respond = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
+    let data = await respond.json();
     renderDom(data);
   }
 }
@@ -60,13 +92,18 @@ async function deleteitem(id) {
 
 
 
+// sorting by watch hours and plan
+let val = document.getElementById("userSort")
+val.onchange = () => {
+ userSort()
+}
 function userSort() {
-  let val = document.getElementById("userSort").value;
-  if (val === "Plan") {
+  // let val = document.getElementById("userSort").value;
+  if (val.value === "Plan") {
     temp.sort(function (a, b) {
       return a.plan - b.plan;
     });
-  } else if (val === "Watch-hours") {
+  } else if (val.value === "Watch-hours") {
     temp.sort(function (a, b) {
       return a.watchhours - b.watchhours;
     })
@@ -74,6 +111,8 @@ function userSort() {
   renderDom(temp)
 }
 
+
+// search function for api
 
 let search = document.getElementById("userSearch")
 search.addEventListener("input",user_search)
@@ -124,6 +163,9 @@ const create_btn = (total_data, data_per_page) => {
    
   }
 }
+
+// onclick functions f
+
 let home = document.getElementById("mylogo")
 home.onclick=()=> {
     window.location.href='index.html'
@@ -157,6 +199,7 @@ dash.onclick=()=> {
 //     console.log(error)
 //   }
 // }
+
 
 
 
