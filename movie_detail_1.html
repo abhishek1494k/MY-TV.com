@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details</title>
+    <script
+      src="https://kit.fontawesome.com/74f4151966.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link rel="stylesheet" href="./landingPage.css" />
+    <link rel="stylesheet" href="./landingPage2.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .sub_container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+
+      #movie_name2 {
+        width: auto;
+        height: 100px;
+        border: 2px solid rgb(255, 255, 255);
+        position: absolute;
+        background: none;
+        margin-top: 50px;
+        margin-left: 100px;
+      }
+
+      #movie_name2 h1 {
+        background: none;
+        font-size: 5rem;
+        /* background: linear-gradient(
+          to right,
+          #24ffa0,
+          #ffffff,
+          #c7c7c7
+        ); */
+        color: white;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        font-style: italic;
+        /* -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text; */
+      }
+
+      #button_div {
+        width: auto;
+        height: auto;
+        border: transparent;
+        position: absolute;
+        bottom: 0;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        align-content: center;
+        justify-content: space-evenly;
+        margin-left: 100px;
+      }
+
+      #button_div button {
+        background-color: aliceblue;
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: medium;
+        border-radius: 10px;
+        margin: 3px;
+      }
+
+      #button_div button span i {
+        background-color: aliceblue;
+        padding: 10px 10px;
+      }
+
+      /* .subsub_container2{
+    width:98%;
+    height:100%;
+    border:3px solid rgb(255, 234, 0);
+    display: flex;
+    flex-direction: row;
+  } */
+      #sub_container2 {
+        width: 100%;
+        height: auto;
+        /* margin-top: 1200px; */
+        border: 3px solid rgb(49, 49, 49);
+        /* background: none; */
+        /* position: absolute; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        align-content: center;
+        gap: 25px;
+        padding: 10px;
+        background-color: rgb(51, 51, 51);
+      }
+
+      #sub_container2 div {
+        border: 2px solid rgb(51, 51, 51);
+        height: 86%;
+        border-radius: 5%;
+      }
+
+      #sub_container2 div img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+        filter: brightness(105%);
+        transition: all;
+        transition-duration: 0.5s;
+      }
+
+      #sub_container2 div img:hover {
+        width: 101%;
+        filter: brightness(90%);
+        border-top: 1px solid white;
+        height: 101%;
+      }
+
+      #sub_container3 {
+        width: 100%;
+        height: auto;
+        border: 3px solid rgb(49, 49, 49);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* align-items: center;
+      align-content: center; */
+        gap: 25px;
+        padding: 10px;
+        background-color: rgb(51, 51, 51);
+      }
+
+      #sub_container3 div {
+        border: 2px solid rgb(51, 51, 51);
+        height: 100%;
+        border-radius: 5%;
+      }
+
+      #sub_container3 div img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+        filter: brightness(105%);
+        transition: all;
+        transition-duration: 0.5s;
+      }
+
+      #sub_container3 div img:hover {
+        width: 101%;
+        filter: brightness(90%);
+        border-top: 4px solid white;
+      }
+
+      #sub_container4 {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        align-items: center;
+        align-content: center;
+        gap: 25px;
+        padding: 20px;
+        background-color: rgb(51, 51, 51);
+      }
+
+      #sub_container4 div {
+        border: 2px solid rgb(51, 51, 51);
+        height: 86%;
+        border-radius: 50%;
+      }
+
+      #sub_container4 p{
+        text-align: center;
+      }
+
+
+      #sub_container4 div img {
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      #sub_container5 {
+        width: 100%;
+        height: auto;
+        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 25px;
+        padding: 20px;
+        background-color: rgb(51, 51, 51);
+      }
+      #sub_container5 div {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #sub_container5 div a {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+
+      #sub_container5 div img {
+        border-radius: 20%;
+      }
+      #sub_container5 div h5 {
+        text-align: center;
+        margin: 5px;
+      }
+
+      #sub_container6 {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        background-color: rgb(0, 0, 0);
+      }
+      #sub_container6 div {
+        width: 25%;
+        height: auto;
+        background-color: rgb(55, 55, 55);
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        line-height: 30px;
+        color: white;
+      }
+      /* #sub_container6 div h2{
+      text-align: center;
+      margin: 5px;
+    }
+    #sub_container6 div p{
+      text-align: center;
+      margin: 5px;
+    } */
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="sub_container">
+    <div id="new_navbar">
+      <div>
+        <a href="./index.html"><span><img
+          width="20%"
+          src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg"
+          alt=""
+        /></span></a>
+      </div>
+      <div id="search_login">
+        <a href="./search_page.html">Search</a>
+        <a href="./log-in.html">SignIn</a>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <div class="color-overlay"></div>
+      <video autoplay loop muted
+        src="./media/Fury Official Trailer (2014) - Brad Pitt, Shia LaBeouf War Movie HD_Segment_0_x264.mp4"></video>
+      <div id="details"></div>
+    </div>
+    <div id="movie_name2">
+      <h1>FURY</h1>
+    </div>
+    <div id="button_div">
+      <button><span><i class="fa-solid fa-play"></i></i></span> Play</button>
+      <button><span><i class="fa-solid fa-display"></i></span> Start Free Trial</button>
+      <button><span><i class="fa-solid fa-plus-minus"></i></span> Add to Watch List</button>
+    </div>
+  </div>
+
+  <div id="sub_container2">
+    <div>
+      <img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/303910/de52d1380fef19c2a46d47432d99acbb72630e8f.jpg" alt="">
+    </div>
+    <div>
+      <img
+        src="https://hbomax-images.warnermediacdn.com/images/GYQl0igvCbMJRmQEAAABJ/tileburnedin?size=1280x720&partner=hbomaxcom&v=4bae507d7149ee90c1b6156bb9c69672&host=art-gallery.api.hbo.com&language=en-us&w=1280"
+        alt="">
+    </div>
+    <div>
+      <img
+        src="https://rogermooresmovienation.files.wordpress.com/2014/10/furytank.jpg"
+        alt="">
+    </div>
+    <div>
+      <img src="https://wallpaperaccess.com/full/3843928.jpg" alt="">
+    </div>
+  </div>
+
+  <h2 style="color:white; background-color:rgb(50, 50, 50);padding-bottom: 16px;">&emsp;Related</h2>
+  <br>
+  <hr width="80%">
+
+  <div id="sub_container3">
+    <div>
+      <img src="https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2021/05/Apple_TV_Mythic_Quest_key_art_sh_cr.jpg.large_2x.jpg?w=2000&quality=82&strip=all&ssl=1" alt="">
+    </div>
+    <div>
+      <img
+        src="https://www.cnet.com/a/img/resize/58f4a00a11f62189076eea69c190a3bd701ca324/hub/2019/09/10/dc1666e8-5704-4a3c-8ec0-4a8210094edc/captura-de-pantalla-2019-09-10-a-las-2-06-59-p-m.png?auto=webp&fit=crop&height=675&width=1200"
+        alt="">
+    </div>
+    <div>
+      <img
+        src="https://static.digit.in/OTT/v2/images/tr:w-1200/puppy-place-411302.jpg"
+        alt="">
+    </div>
+    <div>
+      <img src="https://i.ytimg.com/vi/jPoxE7buoO4/maxresdefault.jpg" alt="">
+    </div>
+    <br>
+  </div>
+
+  <h2 style="color:white; background-color:rgb(50, 50, 50); padding-bottom: 16px;">&emsp;Cast & Crew</h2>
+  <br>
+<hr width="80%">
+
+  <div id="sub_container4">
+    <div>
+      <img src="https://is4-ssl.mzstatic.com/image/thumb/MwuIFtRXwxDLvYUQ-ZdwNw/492x492bb.webp" alt="">
+    </div>
+    <div>
+      <img
+        src="https://is2-ssl.mzstatic.com/image/thumb/oALIF_-u9dzxyFQOzBreNg/492x492bb.webp"
+        alt="">
+    </div>
+    <div>
+      <img
+        src="https://is2-ssl.mzstatic.com/image/thumb/pRqSzIBE4Lke1d3tlRpVgQ/492x492bb.webp"
+        alt="">
+    </div>
+    <div>
+      <img src="https://is5-ssl.mzstatic.com/image/thumb/tZr6r5U4-iGiYUUUPcN1jQ/492x492bb.webp" alt="">
+    </div>
+    <div>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/uxsHjFyYTTDIpmyhRU_8bw/492x492bb.webp" alt="">
+    </div>
+    <div>
+      <img src="https://is4-ssl.mzstatic.com/image/thumb/s5aHHqZA2mr0aN6GIq8Egg/492x492bb.webp" alt="">
+    </div>
+    <div>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/3h1wWqh_MRiZxUrIFDtATg/492x492ve.webp" alt="">
+    </div>
+    <div>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/6-PIE395OAB1KdJwZG7PgA/492x492bb.webp" alt="">
+    </div>
+    <br>
+  </div>
+
+  <h2 style="color:white; background-color:rgb(50, 50, 50);padding-bottom: 16px;">&emsp;How to Watch</h2>
+  <br>
+  <hr style="width:60%;" >
+
+  <div id="sub_container5">
+    <div>
+      <img src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg" alt="">
+      <a href="./log-in.html">Start free Trial</a>
+      <h5 style="color:white;" >7 days free, then $6.99/month</h5>
+    </div>
+  </div>
+
+  <h2 style="color:white; background-color:rgb(50, 50, 50);padding-bottom: 16px;">&emsp;About</h2>
+  <br>
+
+  <div id="sub_container6">
+    <div>
+      <h3>Fury</h3>
+      <h5>THRILLER</h5>
+      <p>Wardaddy, along with his crew of five members, embarks on a mission that puts many lives in danger. The crew members realise that the odds are against them, but still decide to attack the Nazi army..... <span><a href="#">MORE</a></span></p>
+    </div>
+    <div>
+      <h3>✅ 16+</h3>
+      <h5>COMMON SENSE</h5>
+      <p>Smart espionage thriller has language, violence, drinking....</p>
+    </div>
+  </div> -->
+  </body>
+</html>
+
+<script>
+  let data = JSON.parse(localStorage.getItem("movie_detail"));
+  let url = "https://63986336044fa481d69b935b.mockapi.io/mytv";
+  let bag = [];
+  async function getdata() {
+    try {
+      let res = await fetch(url);
+      let out = await res.json();
+      bag = out;
+      display(out);
+    } catch (error) {
+      alert("error");
+    }
+  }
+  getdata();
+  function display(bag){
+    document.querySelector("body").innerHTML = `
+  <div class="sub_container">
+    <div id="new_navbar">
+      <div>
+        <a href="./index.html"><span><img
+          width="20%"
+          src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg"
+          alt=""
+        /></span></a>
+      </div>
+      <div id="search_login">
+        <a href="./search_page.html">Search</a>
+        <a href="./log-in.html">SignIn</a>
+      </div>
+    </div>
+    <div class="poster-container">
+      <div class="poster-overlay"></div>
+      <img src="${data.poster}">
+      <div id="details"></div>
+    </div>
+
+
+    <div id="button_div">
+      <button><span><i class="fa-solid fa-play"></i></i></span> Play</button>
+      <button><span><i class="fa-solid fa-display"></i></span> Start Free Trial</button>
+      <button id="wishlist"><span><i class="fa-solid fa-plus-minus"></i></span> Add to Watch List</button>
+    </div>
+
+  </div>
+
+
+
+  <div id="sub_container2">
+    <div>
+      <img src="${data.img1}" alt="">
+    </div>
+    <div>
+      <img
+        src="${data.img2}"
+        alt="">
+    </div>
+    <div>
+      <img
+        src="${data.img3}"
+        alt="">
+    </div>
+    <div>
+      <img src="${data.img4}" alt="">
+    </div>
+  </div>
+
+  <h2 style="color:white; background-color:rgb(50, 50, 50);padding-bottom: 16px;">&emsp;Related</h2>
+  <br>
+  <hr width="80%">
+
+  <div id="sub_container3">
+    <div>
+      <img src="${bag[Math.floor(Math.random() * 30) + 1].poster}" alt="">
+    </div>
+    <div>
+      <img
+        src="${bag[Math.floor(Math.random() * 30) + 1].poster}"
+        alt="">
+    </div>
+    <div>
+      <img
+        src="${bag[Math.floor(Math.random() * 30) + 1].poster}"
+        alt="">
+    </div>
+    <div>
+      <img src="${bag[Math.floor(Math.random() * 30) + 1].poster}" alt="">
+    </div>
+    <br>
+  </div>
+
+  <h2 style="color:white; background-color:rgb(50, 50, 50); padding-bottom: 16px;">&emsp;Cast & Crew</h2>
+  <br>
+<hr width="80%">
+
+  <div id="sub_container4">
+    <div>
+      <img src="https://is4-ssl.mzstatic.com/image/thumb/MwuIFtRXwxDLvYUQ-ZdwNw/492x492bb.webp" alt="">
+      <p>Jason Sudeikis</p>
+      <p>Ted Lasso</p>
+      </div>
+    <div>
+      <img
+        src="https://is2-ssl.mzstatic.com/image/thumb/oALIF_-u9dzxyFQOzBreNg/492x492bb.webp"
+        alt="">
+      <p>Jason Sudeikis</p>
+      <p>Actor</p>
+    </div>
+    <div>
+      <img
+        src="https://is2-ssl.mzstatic.com/image/thumb/pRqSzIBE4Lke1d3tlRpVgQ/492x492bb.webp"
+        alt="">
+      <p>Jeremy</p>
+      <p>Actor</p>
+    </div>
+    <div>
+      <img src="https://is5-ssl.mzstatic.com/image/thumb/tZr6r5U4-iGiYUUUPcN1jQ/492x492bb.webp" alt="">
+      <p>Alexis</p>
+      <p>Actor</p>
+    </div>
+    
+    <div>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/uxsHjFyYTTDIpmyhRU_8bw/492x492bb.webp" alt="">
+      <p>Jeremy</p>
+      <p>Actor</p>
+    </div>
+    <div>
+      <img src="https://is4-ssl.mzstatic.com/image/thumb/s5aHHqZA2mr0aN6GIq8Egg/492x492bb.webp" alt="">
+      <p>Jeremy</p>
+      <p>Actor</p>
+    </div>
+    <div>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/3h1wWqh_MRiZxUrIFDtATg/492x492ve.webp" alt="">
+      <p>Jeremy</p>
+      <p>Actor</p>
+    </div>
+    <div>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/6-PIE395OAB1KdJwZG7PgA/492x492bb.webp" alt="">
+      <p>Jeremy</p>
+      <p>Actor</p>
+    </div>
+    <br>
+  </div>
+
+  <h2 style="color:white; background-color:rgb(50, 50, 50);padding-bottom: 16px;">&emsp;How to Watch</h2>
+  <br>
+  <hr style="width:60%;" >
+
+  <div id="sub_container5">
+    <div>
+      <img src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg" alt="">
+      <a href="./log-in.html">Start free Trial</a>
+      <h5 style="color:white;" >7 days free, then $6.99/month</h5>
+    </div>
+  </div>
+
+  <h2 style="color:white; background-color:rgb(50, 50, 50);padding-bottom: 16px;">&emsp;About</h2>
+  <br>
+
+  <div id="sub_container6">
+    <div>
+      <h3>${data.name}</h3>
+      <h5>${data.genre}</h5>
+      <p>${  data.description !="" ? data.description : "Wardaddy, along with his crew of five members, embarks on a mission that puts many lives in danger. The crew members realise that the odds are against them, but still decide to attack the Nazi army....."}<span><a href="#">MORE</a></span></p>
+    </div>
+    <div>
+      <h3>✅ 16+</h3>
+      <h5>COMMON SENSE</h5>
+      <p>Smart espionage thriller has language, violence, drinking....</p>
+    </div>
+  </div>`;
+  document.getElementById("wishlist").addEventListener("click",()=>{
+    console.log("DONE")
+    addData(data)
+    window.location.href="wishlist.html"
+  })
+
+  }
+
+
+  function addData(elem){
+  console.log(elem)
+  let data= JSON.parse(localStorage.getItem("wishlist"))||[];
+  data.push(elem)
+  localStorage.setItem("wishlist",JSON.stringify(data))
+  }
+</script>

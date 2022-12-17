@@ -22,18 +22,21 @@ function display(out){
         img.setAttribute("src",out[i].poster);
 
         div.append(img);
-        // div.addEventListener(()=>{
-        //    console.log("XYZ") 
-        // });
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card1").append(div);
     }
-    let doc=document.querySelectorAll(".container_2 .card1 div")
-    for(let x of doc){
-        x.addEventListener("click",()=>{
-            console.log("HAPPPPY")
-        })
-    }
-    console.log(doc)
+
+    // let doc=document.querySelectorAll(".container_2 .card1 div")
+    // for(let x of doc){
+    //     x.addEventListener("click",()=>{
+    //         console.log()
+    //     })
+    // }
+    // console.log(doc)
 
     document.querySelector(".card2").innerHTML=""  
     let x1=count+5;  
@@ -43,6 +46,11 @@ function display(out){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card2").append(div);
     }
 
@@ -54,14 +62,21 @@ function display(out){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card3").append(div);
     }
+
     document.querySelector(".card4").innerHTML=""  
     let x3=count+5;  
     for(let i=count; i<x3; i++){
         count++;
         let div= document.createElement("div");
         let img=document.createElement("img");
+
         img.setAttribute("src",out[i].poster);
         let br=document.createElement("br")
 
@@ -71,7 +86,11 @@ function display(out){
         let des1=document.createElement("a")
         des1.setAttribute("href","Read More")
         des1.innerText="Read More";
-
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         div.append(img,br,des,des1);
         document.querySelector(".card4").append(div);
     }
@@ -83,6 +102,11 @@ function display(out){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card5").append(div);
     }
     document.querySelector(".card7").innerHTML=""  
@@ -93,6 +117,11 @@ function display(out){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card7").append(div);
     }
     document.querySelector(".card6").innerHTML=""  
@@ -103,6 +132,11 @@ function display(out){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card6").append(div);
     }
     console.log(count)
@@ -114,6 +148,11 @@ function display(out){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card7").append(div);
     }
 
@@ -124,6 +163,11 @@ function display(out){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card8").append(div);
     }
 console.log(count,out.length)
@@ -135,6 +179,11 @@ if(count<out.length){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card9").append(div);
     }
 }
@@ -146,6 +195,11 @@ if(count<out.length){
         let img=document.createElement("img");
         img.setAttribute("src",out[i].poster);
         div.append(img);
+        div.addEventListener("click",()=>{
+            // console.log(out[i]);
+            localStorage.setItem("movie_detail",JSON.stringify(out[i]))
+            window.location.href="movie_detail_1.html";
+        })
         document.querySelector(".card10").append(div);
     }
 }

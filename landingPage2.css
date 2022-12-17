@@ -21,7 +21,7 @@
 .card1>div>img:hover,.card2>div>img:hover,.card2>div>img:hover,.card3>div>img:hover,.card4>div>img:hover,.card5>div>img:hover,.card6>div>img:hover,.card7>div>img:hover{
   width:103%;
   filter:brightness(100%);
-  border-top: 4px solid white;
+  border-top: 1px solid white;
 }
 
 .card2>div>img,.card1>div>img,.card3>div>img,.card24>div>img,.card5>div>img,.card6>div>img,.card7>div>img{
@@ -96,3 +96,4 @@ p{
 #new_navbar div{
   margin: 0 20px;
 }
+

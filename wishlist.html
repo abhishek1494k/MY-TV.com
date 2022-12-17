@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist</title>
+    <script
+      src="https://kit.fontawesome.com/74f4151966.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link rel="stylesheet" href="./Footer/footer.css" />
+    <link rel="stylesheet" href="./landingPage.css" />
+    <link rel="stylesheet" href="./landingPage2.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(52, 52, 52);
+      }
+
+      #wishlist {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 50px;
+        margin-top:10px;
+      }
+
+      #wishlist > div{
+        border: 2px solid white;
+        background-color: black;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        border-radius: 10px; 
+      }
+
+      #wishlist > div > img {
+        width: 100%;
+        border-radius: 10px; 
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        border: 1px solid white;
+      }
+
+      #wishlist > div > div>button:nth-child(1) {
+        position:relative;
+        background-color: rgb(255, 0, 51);
+        padding:5px 10px;
+        color:white;
+        font-weight: 600;   
+        border-radius: 10px; 
+      }
+      #wishlist > div > div > button:nth-child(2) {
+        position:relative;
+        background-color: cornflowerblue;
+        padding:5px 10px;
+        color:white;
+        font-weight: 600;   
+        border-radius: 10px; 
+
+      }
+      #wishlist > div > div{
+        display: flex;
+        padding: 10px 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: rgb(0, 0, 0);
+      }
+      #new_navbar div{
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="new_navbar">
+      <div>
+        <a href="./index.html"><span><img
+          width="20%"
+          src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg"
+          alt=""
+        /></span></a>
+      </div>
+      <div id="search_login">
+        <a href="./search_page.html">Search</a>
+        <a href="./log-in.html">SignIn</a>
+      </div>
+    </div>
+    <div id="wishlist"></div>
+  </body>
+</html>
+
+<script>
+  let data = JSON.parse(localStorage.getItem("wishlist")) || [];
+  displaydata(data);
+  console.log(data);
+
+  function displaydata(data) {
+    if (data.length == 0) {
+      console.log(1234);
+      let img = document.createElement("img");
+      img.setAttribute(
+        "src",
+        "https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png"
+      );
+      let des = document.createElement("p");
+      des.innerText = "Sorry, your wishlist is Empty !";
+      document.querySelector("#wishlist").appendChild(img);
+      document.querySelector("#wishlist").appendChild(des);
+    } else {
+      document.querySelector("#wishlist").innerHTML = "";
+      data.forEach((elem, i) => {
+        let div = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.setAttribute("src", elem.poster);
+
+        let bag = document.createElement("button");
+        bag.innerText = "REMOVE";
+        bag.addEventListener("click", function () {
+          deleteData(data, i);
+          alert("⛔ Item will be Removed from Wishlist");
+        });
+
+        let play = document.createElement("button");
+        play.innerText = "Play ▶";
+        play.addEventListener("click", function () {
+          // deleteData(data, i);
+          alert("⛔ Take Subscription");
+        });
+
+        let btndiv = document.createElement("div");
+        btndiv.append(bag,play)
+        div.append(img,btndiv);
+        document.querySelector("#wishlist").append(div);
+      });
+    }
+  }
+
+    function deleteData(data,i) {
+      data.splice(i, 1);
+      localStorage.setItem("wishlist", JSON.stringify(data));
+      displaydata(data);
+      reset();
+    }
+
+    function reset(){
+      location.reload();
+      return 0;
+    }
+
+  // let value=JSON.parse(localStorage.getItem("cart")) || [];
+  //     let totalCost= value.reduce((acc,el)=>{
+  //       return acc+el.price;
+  //       reset();
+  //     },0)
+  //     document.querySelector("#cartValue").innerText="₹ "+totalCost;
+</script>
