@@ -5,6 +5,15 @@ let allMovies=document.getElementById("all-movies")
 let addMoviesbtn=document.getElementById("addMovie")
 let addMovies=document.getElementById("add-movies")
 let editMovies=document.querySelector("#edit-movies")
+let logoutnBtn=document.getElementById("logout")
+logoutnBtn.addEventListener("click",function(){
+    window.location.href="index.html"
+})
+let userBtn=document.getElementById("user")
+userBtn.addEventListener("click",function(){
+   window.location.href="userdata.html"
+})
+
 
 let bag=[]
 showMoviesBtn.addEventListener("click",async function(){
