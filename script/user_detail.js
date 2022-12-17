@@ -1,46 +1,28 @@
+
+// export default details_dom
+
 async function getdata() {
     let response = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
-    // let response = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
     let data = await response.json();
     console.log(data)
-    renderDom(data)
-    activeuser(data)
+    details_dom(data)
+    
    
 }
 getdata()
 let container = document.getElementById("main")
-// let fd = [
-//     {
-//      "name": "Christy Barton",
-//      "email": "Irwin.Schmitt@hotmail.com",
-//      "mobile": "(591) 785-6499 x76046",
-//      "subscription": "967.35",
-//      "plan": 14,
-//      "watchhours": 90,
-//      "region": "Ecuador",
-//      "Recent-watch-Movies": "39695",
-//      "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/23.jpg",
-//      "card-details": "01017980",
-//      "active": true,
-//      "id": "1"
-//     }]
-    // renderDom(fd)
-    ;
-    let userid;
-function renderDom(data) {
-    // data.length = 1;
-    
+function details_dom(data) {
+    data.length = 1;
     container.innerHTML = null;
     container.innerHTML = `${data.map((ele) => {
-        userid = ele.id;
-        console.log(userid)
         return `
 
         <div class="part_one">
             <img src="${ele.image}" alt="">
             <h4>${ele.email}</h4>
             <h5>${ele.mobile}</h5>
-            <button class="dashboard">Dashboard</button>
+            <button id="dash_detail" class="dashboard">Dashboard</button>
+            <button class="dashboard">Remove User</button>
         </div>
         <div class="part_two">
             <div class="item2">
@@ -88,27 +70,33 @@ function renderDom(data) {
     }).join('')}`
  
 }
-let home = document.getElementById("mylogo")
-home.onclick=()=> {
+let home2 = document.getElementById("mylogo")
+home2.onclick=()=> {
     window.location.href='index.html'
 }
-
-function activeuser(au) {
-    let aciveuserdiv = document.querySelector(".item9");
-    console.log(au,"*************")
-    au.forEach((ele) => {
-        if (ele.active === true) {
-            aciveuserdiv.innerText="Online"
-            aciveuserdiv.setAttribute("style","color:red")
-        } else {
-            aciveuserdiv.innerText = "Offline"
-            console.log(aciveuserdiv.innerText)
-        }
-    })
-    renderDom(au)
+let dash_detail = document.getElementById("dash_detail")
+dash_detail.onclick=()=> {
+    window.location.href='adminDashboard.html'
 }
-let dash = document.getElementsByClassName("dash")
-dash.onclick=()=> {
+
+
+// function activeuser(au) {
+//     let aciveuserdiv = document.querySelector(".item9");
+//     console.log(au,"*************")
+//     au.forEach((ele) => {
+//         if (ele.active === true) {
+//             aciveuserdiv.innerText="Online"
+           
+//         } else {
+//             aciveuserdiv.innerText = "Offline"
+//             console.log(aciveuserdiv.innerText)
+//         }
+//     })
+//     details_dom(au)
+// }
+let dash2 = document.getElementsByClassName("dash")
+dash2.onclick=()=> {
     window.location.href='adminDashboard.html'
 }
  
+// export default details_dom
