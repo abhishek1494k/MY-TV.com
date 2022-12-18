@@ -28,14 +28,13 @@ function renderDom(data) {
     .map((ele) => {
       // data.length = 10;
       return `
-            <div id="tempdiv">
-            <img class="imgNE" src="${ele.image}" alt="">
-                <p class="imgNE">${ele.name}</p>
-                <p class="imgNE">${ele.email}</p>              
-                <button class="details_btn" data-id=${ele.id}>DETAILS</button>
-                <button class="delete_btn" data-id=${ele.id}>REMOVE</button></div>
-                <hr>
-                `
+      <div id="tempdiv">
+<img class="imgNE" src="${ele.image}" alt="">
+    <p class="imgNE">${ele.name}</p>
+    <p class="imgNE">${ele.email}</p>              
+    <button class="details_btn" data-id=${ele.id}>DETAILS</button>
+    <button class="delete_btn" data-id=${ele.id}>REMOVE</button></div>
+    <hr> `
     })
     .join("")}`;
 
@@ -44,8 +43,8 @@ function renderDom(data) {
     dbtn.addEventListener("click", function (event) {
       let id = event.target.dataset.id
       window.location.href='user_detail.html'
-      // Detailsofuser(id)
-      
+      // // Detailsofuser(id)
+      localStorage.setItem("userdetail_data",JSON.stringify(data.id))
       })
   }
 
@@ -74,7 +73,7 @@ function renderDom(data) {
 //   window.location.href="user_detail.html"
 // }
 
-
+// fuction for deleting specific user 
 async function deleteitem(id) {
   let res = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user/${id}`, {
     method:'DELETE',
@@ -206,4 +205,6 @@ dash.onclick=()=> {
 
  
  
+
+
 
