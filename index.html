@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>My Tv Landing Page</title>
     <script
       src="https://kit.fontawesome.com/74f4151966.js"
@@ -20,6 +21,12 @@
     <link rel="stylesheet" href="./Footer/footer.css" />
     <link rel="stylesheet" href="./landingPage.css" />
     <link rel="stylesheet" href="./landingPage2.css" />
+    <link rel="stylesheet" href="./popup.css">
+    <style>
+      /* a{
+        color:cornflowerblue;
+      } */
+    </style>
   </head>
   <body>
     <div class="container">
@@ -214,6 +221,7 @@
       <div class="card10"></div>
 
       <div id="footer_main">
+        
         <h1 id="first-part">Questions & Answers.</h1>
         <div id="footer2">
           <div id="part-1">
@@ -289,6 +297,25 @@
         </div>
       </div>
     </div>
+    </div>
+    <div class="w3-container" style="background-color:black;" >
+      <button onclick="document.getElementById('id01').style.display='block'" id="btn_popup">ADMIN LOGIN</button>
+      <div id="id01" class="w3-modal">
+        <div class="w3-modal-content" id="div_popup">
+    
+          <header id="header"> 
+            <span onclick="document.getElementById('id01').style.display='none'" 
+            class="w3-button w3-display-topright" id="cross">&times;</span>
+            <h2>MY>TV</h2>
+          </header>
+    
+          <div>
+            <br>
+            <a href="./adminLogin.html">ADMIN LOGIN</a>
+          </div>
+    
+        </div>
+      </div>
   </body>
 </html>
 
