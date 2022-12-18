@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./style/userdata.css">
-   <script src="https://kit.fontawesome.com/8ebca1e737.js" crossorigin="anonymous"></script>
-    <title>User Data</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>user_data</title>
+    <link rel="stylesheet" href="./style/userdata.css">
+    <script
+      src="https://kit.fontawesome.com/8ebca1e737.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="nav">
+      <div><img src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg" alt="" /></div>
+      <div id="heading"><h4>USER DATA</h4></div>
+      <div>
+       
+        <select class="userSort" name="" id="userSort">
+          <option value="Watch-hours">Sort</option>
+          <option value="Watch-hours">Watch Hours</option>
+          <option value="Plan">Plan</option>
+        </select>
+        <input type="search" placeholder="Search" id="userSearch" />
+      </div>
+     
+    </div>
     
     
-    <div id="userdata">
-        <!-- left section -->
-        <div class="leftside">
-            <div> <img id="mylogo" src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg" alt=""></div>
-           <div><button id="dash"> <i class="fa-solid fa-table-columns"></i>Dashboard</button></div>
-            <div><button>
-                <i class="fa-solid fa-clapperboard"></i> Movies</button></div>
-            <div><button><i class="fa-solid fa-gift"></i> Gift card</button></div>
-            <div><button><i class="fa-solid fa-gear"></i> Setting</button></div>
-        </div>
-        <!-- right section  -->
-        <div class="rightside">
-            <!-- top-section -->
-            <div class="top-sec">
-                <h2>Users Data</h2>
-                <div>
-                    <input type="search" placeholder="search" id="userSearch">
-                    <select class="userSort" name="" id="userSort" >
-                        <!-- <option value="Name">Name</option>
-                        <option value="Country">Country</option> -->
-                        <option value="Watch-hours">Sort </option>
-                        <option value="Watch-hours">Watch Hours</option>
-                        <option value="Plan">Plan</option>
-                    </select>
-                </div>
-               
-            </div>
-            <!-- mid-section -->
-            <div class="mid-sec" >
-                
-            </div>
-        </div>
+
+    <!-- mid-section for appending data -->
+    <div id="midsec">
+      <div class="left">
+        <!-- <i class="fa-solid fa-table-columns"></i> -->
+        <button id="dash">Dashboard</button><br>
+        <!-- <i class="fa-solid fa-clapperboard"></i> -->
+        <button id="movies">Movies</button><br>
+        <!-- <i class="fa-solid fa-gift"></i> -->
+        <button>Gift card</button><br>
+        <!-- <i class="fa-solid fa-gear"></i> -->
+         <button>Setting</button><br>
+      </div>
+      <!-- right section for appending data -->
+      <div id="right_sec"></div>
+
     </div>
     <div id="pagination"></div>
-
-</body>
+  </body>
 </html>
 <script src="./script/userdata.js"></script>
 
+    
