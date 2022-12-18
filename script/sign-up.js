@@ -42,7 +42,7 @@ async function registerfun(event){
                 em=document.querySelector("#email").value;
              }
             
-             if(document.querySelector("#pass").value!=="" && document.querySelector("#pass").value.length>6){
+             if(document.querySelector("#pass").value!=="" && document.querySelector("#pass").value.length>4){
                  pa=document.querySelector("#pass").value;
              }
             

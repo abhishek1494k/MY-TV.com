@@ -47,7 +47,7 @@ background-color: #888;
   cursor: pointer;
 }
 #main{
-            width: 25%;
+            width: 30%;
             height: 600px;
             margin: auto;
             display: flex;
@@ -113,24 +113,23 @@ background-color: #888;
   <!-- Modal content -->
    <div id="main"> 
    <span class="close">&times;</span>
-        <h1>Sign Up</h1>
+        <h1>Payment Details</h1>
         <form action="" autocomplete="on">
-            <input type="text" placeholder="Name" id="name" required><br>
-            <input type="text" placeholder="Email" id="email" required><br>
-            <input type="password" placeholder="Password" id="pass" required><br>
-            <input type="number" placeholder="Enter Phone Number" id="mobileNo" required maxlength="10"><br>
+            <input type="text" placeholder="Frist Name" id="name" required><br>
+            <input type="text" placeholder="Last Name" id="email" required><br>
+            <input type="text" placeholder="Card No." id="pass" required  maxlength="16"><br>
+            <input type="text" placeholder="MM/YYYY" id="mobileNo" required>
+            <input type="number" placeholder="CVV" id="cvv" required maxlength="3"><br>
             <input type="checkbox" id="html" name="fav_language" value="HTML" required>I accept all the Terms & Conditions
              <br>
-            <input type="submit" value="Sign Up" id="sub">
+            <input type="submit" value="Continue >" id="sub">
         </form>
 
-            <p> Already have an account?<a href="log-in.html">Log In</a></p>
+        
         
     </div>
 
 </div>
-
-                  
 
 <script>
 // Get the modal

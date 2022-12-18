@@ -41,8 +41,23 @@ function sortfun(){
     bag.sort(function(a,b){
         return b.year - a.year
     });
+} else {
+    window.location.reload();
 }
 display(bag);
+}
+
+function sort_genre(){
+    let val=document.querySelector("#sort_genre").value;
+    if(val=="genre"){
+        display(bag);
+    }else {
+        let filterdata= bag.filter(function(element){
+            return element.genre == val;
+        });    
+    display(filterdata);
+    }
+
 }
 
 function filterfun(){

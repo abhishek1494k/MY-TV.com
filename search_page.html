@@ -1,42 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search page</title>
-    <link rel="stylesheet" href="./style/search_page.css">
-</head>
-<body>
-    <div id="nav-bar">
-       <div>
-          <img id="logo" onclick="logofun()" src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg" alt="">
-       </div>
-        <div id="all_function">
-            <select name="Sort Movies" id="sort" onchange="sortfun()">
-                <option value="sort movies">Sort movies</option>
-                <option value="Highest Rating">Highest Rating</option>
-                <option value="Length">Length</option>
-                <option value="Year">Year</option>
-                </select>
-                <select name="" id="filt" onchange="filterfun()">
-                    <option value="English">English</option>
-                    <option value="Hindi">Hindi</option>
-                    <option value="English, Hindi">English, Hindi</option>
-                    <option value="Spanish">Spanish</option>
-                
-                   </select>
-        
-                   <input type="text" placeholder="Search Movies" oninput="search()" id="valu">
-        </div>
-        
-    </div>
-    
-    <h2>Movies/Web-Series</h2>
-    <div id="container">
-        
-    </div>
-</body>
+    <link rel="stylesheet" href="./style/search_page.css" />
+    <style>
+      #container div img {
+        filter: brightness(90%);
+        transition: filter 0.5s;
+        transition: 0.5s;
+      }
 
-<script src="./script/search_page.js"></script>
+      #container div img:hover {
+        width: 103%;
+        height: 103%;
+        filter: brightness(100%);
+        transition: 0.5s;
+        border: 2px solid white;
+        /* border-bottom:3px solid white;
+  border-top: 3px solid white; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav-bar">
+      <div>
+        <img
+          id="logo"
+          onclick="logofun()"
+          src="./media/WhatsApp Image 2022-12-13 at 7.31.43 PM.jpeg"
+          alt=""
+        />
+      </div>
+
+      <div id="all_function">
+        <select name="Sort Movies" id="sort_genre" onchange="sort_genre()">
+            <option value="genre">Genre</option>
+            <option value="Action">Action</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Kids">Kids</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="War">War</option>
+            <option value="Comedy">Comedy</option>
+          </select>
+        <select name="Sort Movies" id="sort" onchange="sortfun()">
+          <option value="sort movies">Sort movies</option>
+          <option value="Highest Rating">Highest Rating</option>
+          <option value="Length">Length</option>
+          <option value="Year">Year</option>
+        </select>
+        <select name="" id="filt" onchange="filterfun()">
+          <option value="English">English</option>
+          <option value="Hindi">Hindi</option>
+          <option value="Spanish">Spanish</option>
+        </select>
+
+        <input
+          type="text"
+          placeholder=" Search Movies"
+          oninput="search()"
+          id="valu"
+        />
+      </div>
+
+    </div>
+
+    <h2>Movies/Web-Series</h2>
+    <div id="container"></div>
+  </body>
+
+  <script src="./script/search_page.js"></script>
 </html>
