@@ -14,10 +14,9 @@ body {
 }
 .leftside {
   /* border-right: 3px solid grey; */
-  padding-top: 1.5%;
   width: 20%;
   height: auto;
-  background:#696969	;
+  background:black	;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .leftside div {
@@ -28,24 +27,22 @@ body {
 }
 .leftside div button {
   /* border: 2px solid green; */
-  margin-top: 20%;
+  margin-top: 40%;
   justify-content: center;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   width: 100%;
 }
 .leftside img{
+margin: 6px;
   width: 50%;
  
 }
 .rightside {
-  
-  /* border: 2px solid orange; */
   width: 80%;
 }
 .top-sec {
   /* border-bottom: 3px solid grey; */
-  /* border: 2px solid black; */
-  background-color: #696969	;
+  background-color: black 	;
   height: 80px;
   display: flex;
   justify-content: space-around;
@@ -55,23 +52,21 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .top-sec h2{
+  font-size: 2rem;
+  text-transform: uppercase;
   color: white;
- 
+  font-weight: 600;
 }
 .top-sec h2:hover{
  color: black;
- 
 }
 .mid-sec {
   justify-content: space-between;
   margin: auto;
   width: 100%;
   padding: 5px;
-  
 }
-.imgNE{
-  overflow: hidden;
-}
+
 
 .mid-sec>div{
   width: 80%;
@@ -90,7 +85,7 @@ body {
   width: 10%;
   /* width: 50%; */
 }
-
+.mid-sec p
 
  select:hover {
   cursor: pointer;
@@ -158,10 +153,9 @@ padding: 6px 25px 6px 25px;
   color: white;
   background-color: skyblue;
   border:none;
+
 }
-.delete_btn{
-  text-align: center;
-}
+
 .delete_btn:hover{
   cursor: pointer;
   color: black;
@@ -176,10 +170,7 @@ padding: 6px 25px 6px 25px;
 .imgNE:hover{
 text-decoration: underline;
 }
-#button_div{
-  display: flex;
-  justify-content: space-between;
-}
+
 
 @media all and (min-width:768px) and (max-width:1024px){
   #userdata{
@@ -187,9 +178,29 @@ text-decoration: underline;
         width: 100%;
   }
   .leftside {
-  
+  width: ;
   }
   .leftside div{
     width: 50%;
+  }
+  .mid-sec>div{
+    width: 100%;
+    /* display: block; */
+  }
+  .top-sec{
+    width: 100%;
+  }
+}
+
+@media all and (min-width:320px) and (max-width:768px){
+  .mid-sec>div{
+    display: block;
+    width: 70%;
+  }
+  .rightside{
+    width: 40%;
+  }
+   .leftside {
+  width: 30%;
   }
 }

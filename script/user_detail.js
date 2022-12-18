@@ -1,7 +1,7 @@
 
 // export default details_dom
 
-async function getdata() {
+async function getdata(id) {
     let response = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
     let data = await response.json();
     console.log(data)
@@ -19,10 +19,11 @@ function details_dom(data) {
 
         <div class="part_one">
             <img src="${ele.image}" alt="">
+            <h4>${ele.name}</h4>
             <h4>${ele.email}</h4>
             <h5>${ele.mobile}</h5>
             <button id="dash_detail" class="dashboard">Dashboard</button>
-            <button class="dashboard">Remove User</button>
+            
         </div>
         <div class="part_two">
             <div class="item2">
@@ -35,7 +36,7 @@ function details_dom(data) {
             </div>
             <div class="item4">
                 <h4>Active Plan</h4>
-                <p>${+ele.plan} $</p>
+                <p>${Math.round(+ele.plan/10)} $</p>
             </div>
             <div class="item5">
                 <h4>Watch Hours</h4>
