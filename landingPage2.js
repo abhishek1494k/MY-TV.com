@@ -156,6 +156,8 @@ function display(out){
         document.querySelector(".card7").append(div);
     }
 
+    let h4= document.createElement("h4");
+    h4.innerText="Watch Premieres for Free"
     document.querySelector(".card8").innerHTML=""   
     for(let i=count; i<out.length; i++){
         count++;
@@ -168,7 +170,7 @@ function display(out){
             localStorage.setItem("movie_detail",JSON.stringify(out[i]))
             window.location.href="movie_detail_1.html";
         })
-        document.querySelector(".card8").append(div);
+        document.querySelector(".card8").append(h4,div);
     }
 console.log(count,out.length)
 if(count<out.length){
@@ -203,6 +205,5 @@ if(count<out.length){
         document.querySelector(".card10").append(div);
     }
 }
-
 }
 
