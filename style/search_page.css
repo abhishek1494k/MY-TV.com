@@ -29,20 +29,17 @@
   h2{
     margin: 20px;
   }
-  
-  
+    
   #all_function{
     display: flex;
-    width: 40%;
+    width: auto;
     justify-content: space-around;
   }
   #nav-bar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     background-color: black;
-    
   }
   #nav-bar>div>img{
     height: 65px;
@@ -51,21 +48,62 @@
   #all_function>input{
     width: 30%;
     height: 25px;
+    outline:none;
+    margin:5px;
     border-radius: 8px;
     padding: 5px 10px;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 27, 27);
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
+
+
+
   #all_function>select{
     width: 22%;
     height: 40px;
     border-radius: 8px;
-    /* padding: 5px 10px; */
-    background-color: black;
+    padding: 5px 5px;
+    background-color: rgb(66, 132, 255);
     color: white;
+    font-weight: 600;
+    text-align: center;
+    margin:5px;
+    outline:none;
+    transition:0.6s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  #all_function>select:hover{
+    width: 24%;
+    height: 45px;
+    background-color: rgb(84, 142, 250);
+    color: white;
+    outline:none;
+    padding-top:5px;
+  }
+
+  #all_function>select>option{
+    background-color: white;
+    text-align: center;
+    color:black;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.5s;
+    outline:none;
+  }
+
+  #all_function>select>option:hover{
+    background-color: cornflowerblue;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-weight: 600;
+    text-align: center;
+    outline:none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
  
-
   @media all and (min-width:551px) and (max-width:768px){
     #container{
       display: grid;

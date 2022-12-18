@@ -13,10 +13,10 @@ submitBtn.addEventListener("click",function(){
         obj["pa"]=password.value;
         userdata.push(obj)
         localStorage.setItem("data",JSON.stringify(userdata))
-        alert("Password Changed Sucessfully.")
+        alert("✅Password Changed Sucessfully.")
         window.location.href="log-in.html"
     }else{
-        alert("Please Enter Valid Captcha.")
+        alert("❌Please Enter Valid Captcha❌")
     }
 })
 
