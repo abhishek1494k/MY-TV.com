@@ -37,3 +37,8 @@ newcaptcha.addEventListener("click",function(){
         count=0
     }
 })
+
+
+
+
+
