@@ -10,7 +10,7 @@ async function fetchuserdata() {
     let res = await fetch(api);
     let data = await res.json();
     temp = data;
-    renderDom(temp)
+    // renderDom(temp)
     create_btn(data.length,10)
     console.log(temp)
   }
@@ -81,11 +81,12 @@ async function deleteitem(id) {
   );
   if (res.ok) {
     alert("✅User Deleted Sucessfully");
-    let respond = await fetch(
-      `https://639889b9044fa481d6a154f8.mockapi.io/user`
-    );
-    let data = await respond.json();
-    renderDom(data);
+    // let respond = await fetch(
+    //   `https://639889b9044fa481d6a154f8.mockapi.io/user`
+    // );
+    // let data = await respond.json();
+    // renderDom(data);
+    window.location.reload()
   }
 }
  

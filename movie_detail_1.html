@@ -89,6 +89,13 @@
         padding: 10px 10px;
       }
 
+      /* .subsub_container2{
+    width:98%;
+    height:100%;
+    border:3px solid rgb(255, 234, 0);
+    display: flex;
+    flex-direction: row;
+  } */
       #sub_container2 {
         width: 100%;
         height: auto;
@@ -179,10 +186,9 @@
         border-radius: 50%;
       }
 
-      #sub_container4 p{
+      #sub_container4 p {
         text-align: center;
       }
-
 
       #sub_container4 div img {
         width: 100%;
@@ -201,6 +207,7 @@
         padding: 20px;
         background-color: rgb(51, 51, 51);
       }
+
       #sub_container5 div {
         width: 15%;
         display: flex;
@@ -219,6 +226,7 @@
       #sub_container5 div img {
         border-radius: 20%;
       }
+
       #sub_container5 div h5 {
         text-align: center;
         margin: 5px;
@@ -232,6 +240,7 @@
         padding: 20px;
         background-color: rgb(0, 0, 0);
       }
+
       #sub_container6 div {
         width: 25%;
         height: auto;
@@ -242,6 +251,7 @@
         line-height: 30px;
         color: white;
       }
+
       /* #sub_container6 div h2{
       text-align: center;
       margin: 5px;
@@ -409,7 +419,7 @@
     }
   }
   getdata();
-  function display(bag){
+  function display(bag) {
     document.querySelector("body").innerHTML = `
   <div class="sub_container">
     <div id="new_navbar">
@@ -557,7 +567,11 @@
     <div>
       <h3>${data.name}</h3>
       <h5>${data.genre}</h5>
-      <p>${  data.description !="" ? data.description : "Wardaddy, along with his crew of five members, embarks on a mission that puts many lives in danger. The crew members realise that the odds are against them, but still decide to attack the Nazi army....."}<span><a href="#">MORE</a></span></p>
+      <p>${
+        data.description != ""
+          ? data.description
+          : "Wardaddy, along with his crew of five members, embarks on a mission that puts many lives in danger. The crew members realise that the odds are against them, but still decide to attack the Nazi army....."
+      }<span><a href="#">MORE</a></span></p>
     </div>
     <div>
       <h3>✅ 16+</h3>
@@ -565,19 +579,41 @@
       <p>Smart espionage thriller has language, violence, drinking....</p>
     </div>
   </div>`;
-  document.getElementById("wishlist").addEventListener("click",()=>{
-    console.log("DONE")
-    addData(data)
-    window.location.href="wishlist.html"
-  })
+    document.getElementById("wishlist").addEventListener("click", () => {
+      console.log("DONE");
+      addData(data);
+      // window.location.href="wishlist.html"
+    });
+    // document.getElementById("#sub_container3").addEventListener("click",()=>{
+    //         console.log("ABC");
+    //         localStorage.setItem("movie_detail",JSON.stringify(bag[Math.floor(Math.random() * 30) + 1].poster));
+    //         window.location.href="movie_detail_1.html";
+    //     })
+  }
 
+  function addData(elem) {
+    // console.log(elem.id)
+    let data = JSON.parse(localStorage.getItem("wishlist")) || [];
+    // console.log("*****", data)
+    if (data.length == 0) {
+      data.push(elem);
+      alert("✅Movie added to wishlist");
+      localStorage.setItem("wishlist", JSON.stringify(data));
+      window.location.href="wishlist.html";
+    } else {
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].name === elem.name) {
+          alert("❌Movie already in List");
+          return;
+        }
+      }
+      data.push(elem);
+      alert("✅Movie added to wishlist");
+      localStorage.setItem("wishlist", JSON.stringify(data));
+      window.location.href = "wishlist.html";
+    }
   }
 
 
-  function addData(elem){
-  console.log(elem)
-  let data= JSON.parse(localStorage.getItem("wishlist"))||[];
-  data.push(elem)
-  localStorage.setItem("wishlist",JSON.stringify(data))
-  }
+
 </script>

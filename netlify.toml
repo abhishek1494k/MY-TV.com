@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/stopwatch.html"
+status = 200

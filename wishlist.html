@@ -76,9 +76,32 @@
         flex-wrap: wrap;
         background-color: rgb(0, 0, 0);
       }
+
       #new_navbar div{
         background-color: black;
       }
+
+      #empty{
+        width:50%;
+        height:70%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+      }
+
+      #empty>p{
+        text-align: center;
+        font-size: larger;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      #empty>img{
+        width:40%;
+      }
+
     </style>
   </head>
   <body>
@@ -96,6 +119,7 @@
       </div>
     </div>
     <div id="wishlist"></div>
+    <div id="empty"></div>
   </body>
 </html>
 
@@ -113,9 +137,9 @@
         "https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png"
       );
       let des = document.createElement("p");
-      des.innerText = "Sorry, your wishlist is Empty !";
-      document.querySelector("#wishlist").appendChild(img);
-      document.querySelector("#wishlist").appendChild(des);
+      des.innerText = "Sorry, your Watchlist is Empty !!!!!!!!!!!";
+      document.querySelector("#empty").appendChild(img);
+      document.querySelector("#empty").appendChild(des);
     } else {
       document.querySelector("#wishlist").innerHTML = "";
       data.forEach((elem, i) => {
@@ -158,10 +182,5 @@
       return 0;
     }
 
-  // let value=JSON.parse(localStorage.getItem("cart")) || [];
-  //     let totalCost= value.reduce((acc,el)=>{
-  //       return acc+el.price;
-  //       reset();
-  //     },0)
-  //     document.querySelector("#cartValue").innerText="₹ "+totalCost;
+
 </script>
