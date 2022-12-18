@@ -16,7 +16,9 @@ function display(out){
     out.forEach((elem) => {
         let di= document.createElement("div");
         di.addEventListener("click",()=>{
-            console.log("ok its working");
+            console.log("ok its working");///--------------------------------
+            localStorage.setItem("movie_detail",JSON.stringify(elem))
+            window.location.href="movie_detail_1.html";
         })
         let im=document.createElement("img");
         im.setAttribute("src",elem.poster);

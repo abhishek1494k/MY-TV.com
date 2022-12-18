@@ -7,10 +7,27 @@ async function getdata(){
         bag=out;
         display(out);
     } catch (error) {
-        alert("error")
+        // alert("error")
     }
 };
 getdata();
+
+let url2 = "https://639889b9044fa481d6a154f8.mockapi.io/user";
+let bag2=[];
+async function getdata2(){
+    try {
+        let res= await fetch(url2);
+        let out=await res.json();
+        bag2=out;
+        console.log(bag2[bag2.length-1].image)
+        display2(out);
+    } catch (error) {
+        // alert("error")
+    }
+};
+getdata2();
+
+
 let count=0;
 
 function display(out){
@@ -84,7 +101,7 @@ function display(out){
         des.innerText=out[i].description.substring(0,80)+" ...."
 
         let des1=document.createElement("a")
-        des1.setAttribute("href","Read More")
+        des1.setAttribute("href","#")
         des1.innerText="Read More";
         div.addEventListener("click",()=>{
             // console.log(out[i]);
@@ -206,4 +223,14 @@ if(count<out.length){
     }
 }
 }
+
+
+function display2(){
+    let img = document.createElement("img")
+    img.setAttribute("src",`${bag2[bag2.length-1].image}`)
+    document.getElementById("search_login").append(img)
+}
+
+
+
 
