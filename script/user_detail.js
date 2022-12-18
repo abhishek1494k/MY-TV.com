@@ -1,18 +1,26 @@
 
 // export default details_dom
+let lsdata = JSON.parse(localStorage.getItem("userdetail_data"));
+let arr = [];
+arr.push(lsdata)
 
-async function getdata(id) {
-    let response = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
-    let data = await response.json();
-    console.log(data)
-    details_dom(data)
+// let url = `https://639889b9044fa481d6a154f8.mockapi.io/user`;
+// let temp = [];
+// temp = data
+// details_dom(temp)
+// async function getdata() {
+//     let response = await fetch(url);
+//     let data = await response.json();
+//     temp = data;
+//     console.log(temp)
+//     details_dom(temp)
     
    
-}
-getdata()
+// }
+// getdata()
 let container = document.getElementById("main")
 function details_dom(data) {
-    data.length = 1;
+   
     container.innerHTML = null;
     container.innerHTML = `${data.map((ele) => {
         return `
@@ -71,14 +79,15 @@ function details_dom(data) {
     }).join('')}`
  
 }
+details_dom(arr)
 let home2 = document.getElementById("mylogo")
 home2.onclick=()=> {
     window.location.href='index.html'
 }
-let dash_detail = document.getElementById("dash_detail")
-dash_detail.onclick=()=> {
-    window.location.href='adminDashboard.html'
-}
+// let dash_detail = document.getElementById("dash_detail")
+// dash_detail.onclick=()=> {
+//     window.location.href='adminDashboard.html'
+// }
 
 
 // function activeuser(au) {
@@ -95,7 +104,7 @@ dash_detail.onclick=()=> {
 //     })
 //     details_dom(au)
 // }
-let dash2 = document.getElementsByClassName("dash")
+let dash2 = document.getElementsByClassName("dash_detail")
 dash2.onclick=()=> {
     window.location.href='adminDashboard.html'
 }

@@ -1,112 +1,72 @@
 *{
-    font-family: serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-body {
-  background:white;
-  }
-#userdata {
-  /* border: 2px solid blue; */
+#nav{
   display: flex;
-}
-.leftside {
-  /* border-right: 3px solid grey; */
-  width: 20%;
-  height: auto;
-  background:black	;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.leftside div {
-  /* border: 2px solid red; */
-  margin-bottom:50px ;
-  margin: auto;
-  width: 50%;
-}
-.leftside div button {
-  /* border: 2px solid green; */
-  margin-top: 40%;
-  justify-content: center;
-  /* margin-bottom: 50px; */
-  width: 100%;
-}
-.leftside img{
-margin: 6px;
-  width: 50%;
- 
-}
-.rightside {
-  width: 80%;
-}
-.top-sec {
-  /* border-bottom: 3px solid grey; */
-  background-color: black 	;
-  height: 80px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.top-sec h2{
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: white;
-  font-weight: 600;
-}
-.top-sec h2:hover{
- color: black;
-}
-.mid-sec {
+  height: 5%;
   justify-content: space-between;
-  margin: auto;
-  width: 100%;
-  padding: 5px;
-}
-
-
-.mid-sec>div{
-  width: 80%;
-  /* border: 2px solid black; */
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
   align-items: center;
+  background-color: black;
+  width: 100%;
   margin: auto;
-  border-radius: 10px;
+  padding: 0px 20px 0px 20px;
   
 }
-.mid-sec img {
-  /* border: 2px solid white; */
-  border-radius: 50%;
-  width: 10%;
-  /* width: 50%; */
+#nav img{
+  width: 20%;
 }
-.mid-sec p
+#heading{
+ font-size: 2rem;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+#heading:hover{
+color: cornflowerblue;
+}
+/* .mylogo{
+  width: ;
+} */
+#midsec{
+  display: flex;
+  margin: auto;
+}
 
- select:hover {
-  cursor: pointer;
-  /* background-color: ; */
+.left{
+  width: 20%;
+  border-right: 3px solid grey;
 }
-select{
-    font-size: 1rem;
-    background-color:black;
-    color: white;
-    padding: 6px 10px 6px 10px ;
-    border-radius: 10px;
+/* .left>i{
+ margin-left: 10%;
+} */
+.left>button{
+  height: 30px;
+  width: 80%;
+  margin: 10px 0px 10px 20px;
+  border: none;
+  background-color:white;
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 7px;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 #userSearch {
   background: #fff;
   height: 30px;
-  border-radius: 30px;
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border-radius: 5px;
   transition: 0.8s;
+  border: 1px solid grey;
 
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
     -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
@@ -114,25 +74,86 @@ select{
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
+#userSort{
+  border-radius: 5px;
+  margin-right: 10px;
+ height: 30px;
+ color: black;
+ background-color:cornflowerblue ;
+}
+
 #userSearchr:hover {
   animation: hoverShake 0.15s linear 3;
 }
-.leftside div button {
-    background-color: #eef0f2;
+.left>button:hover{
+  background-color:black;
+  color:white;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#dash{
+  margin-top: 30%;
+}
+#right_sec{
+  margin-top: 2%;
+  width:100%
+
+}
+
+#datadiv{
+  display: flex;
+  height: 65px;
+align-content: center;
+
+  border-bottom: 1px solid grey;
+  justify-content: center;
+}
+#datadiv div{
+align-items: center;
+/* margin: auto; */
+
+}
+#datadiv:hover{
+background-color: #E8E8E8;
+color: black;
+font-weight: 500;
+cursor: pointer;
+}
+.img-name-email{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+ 
+}
+.img-name-email>div>img{
+  width: 50%;
+  border-radius: 50%;
+  /* border: 2px solid green; */
+}
+
+.dlt_detail{
+  width: 30%;
+ text-align: center;
+  margin: auto;
+}
+.details_btn,.delete_btn{
+margin-left: 20px;
+margin-right: 20px;
+  padding: 4px 8px 4px 8px;
   border: none;
-  border-radius: 7px;
-  padding: 5px;
-  outline: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  
-  
+  border-radius: 5px;
+  color: white;
+  background-color: cornflowerblue;
 }
-.leftside div button:hover{
-    cursor: pointer;
-    background-color:#ECEFF1;
+.details_btn:hover,.delete_btn:hover{
+  padding: 4px,10px,4px,10px;
+  border-radius: 2px;
+  color: white;
+  font-weight: 500;
+ cursor: pointer;
 }
+
 #pagination{
   margin: 2% 0 10% 0;
   text-align: center;
@@ -141,66 +162,20 @@ select{
 #pagination button{
   border:none;
   border-radius: 10px;
-  background-color: #555555;
   color: white;
+  background-color: cornflowerblue;
   margin-left:10px;
 padding: 6px 25px 6px 25px;
 }
-
-.delete_btn,.details_btn{
-  padding: 6px 20px 6px 20px;
-  border-radius: 10%;
+#pagination button:hover{
+  background-color:black ;
   color: white;
-  background-color: skyblue;
-  border:none;
-
+  font-weight: 500;
 }
 
-.delete_btn:hover{
-  cursor: pointer;
-  color: black;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.details_btn:hover {
-  cursor: pointer;
-  color: black;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.imgNE:hover{
-text-decoration: underline;
-}
-
-
-@media all and (min-width:768px) and (max-width:1024px){
-  #userdata{
-    height: auto;
-        width: 100%;
-  }
-  .leftside {
-  width: ;
-  }
-  .leftside div{
-    width: 50%;
-  }
-  .mid-sec>div{
+@media only screen and (max-width: 600px){
+  #nav{
     width: 100%;
-    /* display: block; */
-  }
-  .top-sec{
-    width: 100%;
-  }
-}
-
-@media all and (min-width:320px) and (max-width:768px){
-  .mid-sec>div{
-    display: block;
-    width: 70%;
-  }
-  .rightside{
-    width: 40%;
-  }
-   .leftside {
-  width: 30%;
+    display: flex;
   }
 }
