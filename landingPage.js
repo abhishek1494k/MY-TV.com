@@ -68,3 +68,8 @@ function carousel() {
 carousel();
 
 
+document.getElementById("play").addEventListener("click",()=>{
+  window.location.href="movie_detail.html"
+})
+
+

@@ -6,7 +6,6 @@
 #footer2{
     height: auto;
     width: 75%;
-    /* border: 1px solid red; */
     margin: auto;
 }
 #part-1 button{
@@ -104,8 +103,9 @@
 }
 
 #p1,#p2,#p3,#p4,#p5,#p6,#p7{
-    color:rgb(255, 255, 255);
-    line-height: 38px;
+    color:rgb(215, 215, 215);
+    line-height: 25px;
+    font-style: italic;
 }
 #footer_main{
     background-color: black;
@@ -123,4 +123,12 @@ hr{
 }
 .hr{
     width:99%;
+}
+
+#tc{
+background-color: rgb(0, 0, 0);
+}
+
+#tc h6{
+    color: white;
 }

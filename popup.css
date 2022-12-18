@@ -1,11 +1,12 @@
     #div_popup{
-        width:30%;
-        height:50%;
+        width:40%;
+        height:auto;
         text-align: center;
         background-color: black;
         color: white;
         font-family: "Montserrat", sans-serif;
-        border-radius: 20px;
+        border-radius: 20px;;
+        /* border:0.5px solid white; */
     }
     #header,#cross{
         background-color: rgb(57, 57, 57);
@@ -19,28 +20,41 @@
 
     #btn_popup{
         outline: none;
-        background-color: cornflowerblue;
+        background-color: rgb(0, 0, 0);
         color: white;
-        font-weight: 500;
         border: none;
-        padding:5px 5px;
-        transition: 0.6s;
+        transition: 0.3s;
         border-radius:15px;
         filter: brightness(90%);
         box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     }
 
     #btn_popup:hover{
-        font-weight: 600;
-        padding:10px 10px;
-        border-radius:25px;
+        font-weight: 500;
+        padding:10px;
         cursor: grab;
-        filter: brightness(100%);
+        background-color: white;
+        color: black;
     }
 
     .w3-container{
         display: flex;
-        justify-content: space-around;
+        justify-content:flex-end;
         padding:20px;
+    }
+
+    #tc2{
+        background-color: cornflowerblue;
+        padding:5px;
+        border-radius: 10px;
+        filter: brightness(90%);
+        transition: 0.5s;
+        margin: 10px;
+    }
+    #tc2:hover{
+        background-color: cornflowerblue;
+        padding:6px;
+        filter: brightness(100%);
+        cursor: grab;
     }
 
