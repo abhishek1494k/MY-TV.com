@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -99,7 +98,10 @@ ul li {
 
 .banner h1 {
   font-size: 5rem;
-  background: linear-gradient(to right, #f32170, #be421c, #cf23cf, #cc6b33);
+  font-weight: 800;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(to right, #ffff00, #be421c, #cf23cf, #cc6b33);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -191,44 +193,11 @@ ul li {
   cursor: pointer;
 }
 
-/* .togglebtn{
-    display: none;
-    font-size: 30px;
-    background-color: transparent;
-    border: none;
-    outline:none;
-    color:#0094da;
-} */
-
-/* //Media Querries */
 @media only screen and (max-width: 1150px) {
   .banner h1 {
     font-size: 3.8rem;
   }
 
-  /* .navbar{
-        width:100%;
-        display: none;
-    }
-
-    .left-nav,.right-nav{
-        width:100%;
-        justify-content: flex-start;
-        margin: 20px 0;
-    }
-
-    ul li{
-        margin-right: 30px;
-    } */
-
-  /* .togglebtn{
-        display: block;
-        font-size: 2rem;
-        color:#fff;
-        margin-top: 18px;
-        position: absolute;
-        right:20px;
-    } */
 }
 
 @media only screen and (max-width: 768px) {
@@ -254,9 +223,6 @@ ul li {
 }
 
 
-
-
-
 .video-container {
   width: 100%;
   height: 100vh;
@@ -279,7 +245,7 @@ ul li {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 
@@ -306,6 +272,14 @@ ul li {
     top: 0;
     left: 0;
     opacity: 0.2;
+}
+
+#play:hover{
+  transition: 0.5s;
+  background-color: cornflowerblue;
+  border:1px solid white;
+  color:white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./signup.css" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #888;
+      }
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        margin-left: 90%;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #login {
+        width: 25%;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 50px;
+        justify-content: space-evenly;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 10px;
+        background-color: black;
+        margin-top: 50px;
+        text-align: center;
+        color: silver;
+        align-items: center;
+      }
+      input {
+        height: 45px;
+        border-radius: 10px;
+        border: 1px solid silver;
+        background-color: black;
+        color: silver;
+        margin-top: 40px;
+        width: 350px;
+        padding: 0px 20px;
+        font-size: 17px;
+      }
+
+      p {
+        color: silver;
+      }
+      a {
+        color: red;
+        margin-left: 10px;
+      }
+      h1 {
+        color: silver;
+        margin: 0px;
+      }
+      #sub {
+        width: 35%;
+        background-color: cornflowerblue;
+      }
+      #html {
+        color: silver;
+        height: 12px;
+        text-align: left;
+        margin-right: 5px;
+        width: 12px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Modal Example</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div id="login">
+        <span class="close">&times;</span>
+        <h1>Log In</h1>
+        <form action="" autocomplete="on">
+          <input type="text" placeholder="Email" id="email" required /><br />
+          <input
+            type="password"
+            placeholder="Password"
+            id="pass"
+            required
+          /><br />
+          <input type="submit" value="Log In" id="sub" />
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <button id="myBtn">Sign Up</button>
+
+        <!-- -----------------------------signUP ------------------ -->
+
+        <div id="myModal" class="modal">
+          <div id="main">
+            <span class="close">&times;</span>
+            <h1>Sign Up</h1>
+            <form action="" autocomplete="on">
+              <input type="text" placeholder="Name" id="name" required /><br />
+              <input
+                type="text"
+                placeholder="Email"
+                id="email"
+                required
+              /><br />
+              <input
+                type="password"
+                placeholder="Password"
+                id="pass"
+                required
+              /><br />
+              <input
+                type="number"
+                placeholder="Enter Phone Number"
+                id="mobileNo"
+                required
+                maxlength="10"
+              /><br />
+              <input
+                type="checkbox"
+                id="html"
+                name="fav_language"
+                value="HTML"
+                required
+              />I accept all the Terms & Conditions   <br />
+              <input type="submit" value="Sign Up" id="sub" />
+            </form>
+            <p>Already have an account?<a href="log-in.html">Log In</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+let Details=JSON.parse(localStorage.getItem("data")) || [];
+    document.querySelector("#login form").addEventListener("submit",myfun);
+      function myfun(){
+        let email,pass;
+
+        email=document.querySelector("#email").value;
+        pass=document.querySelector("#pass").value;
+             let count=0;
+            Details.forEach(element => {
+
+                if(email==element.em && pass==element.pa){
+                   count++;
+                }
+                
+             });
+             if(count>0){
+                // window.location.assign("index.html")
+                alert("log-in Successful");
+             }else{
+                alert("Wrong Credentials")
+             }
+             document.querySelector("#email").value="";
+             document.querySelector("#pass").value="";
+             }     
+      
+</script>
+ 
+
+</body>
+</html>
+
+<!-- <script>
+
+  //--------------------------- SIGN UP SCRIPT----------------------------
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+      let arr = JSON.parse(localStorage.getItem("data")) || [];
+      document.querySelector("#main form").addEventListener("submit", myfun);
+      function myfun() {
+        let na, em, pa, mob;
+
+        if (
+          document.querySelector("#name").value !== "" &&
+          document.querySelector("#name").value.length > 3
+        ) {
+          na = document.querySelector("#name").value;
+        }
+
+        if (
+          document.querySelector("#email").value !== "" &&
+          document.querySelector("#email").value.length > 10
+        ) {
+          em = document.querySelector("#email").value;
+        }
+
+        if (
+          document.querySelector("#pass").value !== "" &&
+          document.querySelector("#pass").value.length > 6
+        ) {
+          pa = document.querySelector("#pass").value;
+        }
+
+        if (
+          document.querySelector("#mobileNo").value !== "" &&
+          document.querySelector("#mobileNo").value.length > 6
+        ) {
+          mob = document.querySelector("#mobileNo").value;
+        }
+
+        if (
+          na == undefined ||
+          em == undefined ||
+          pa == undefined ||
+          mob == undefined
+        ) {
+          alert("Invalid Details");
+        } else {
+          let obj = {
+            na,
+            em,
+            pa,
+            mob,
+          };
+
+          arr.push(obj);
+          localStorage.setItem("data", JSON.stringify(arr));
+          document.querySelector("#name").value = "";
+          document.querySelector("#email").value = "";
+          document.querySelector("#pass").value = "";
+          document.querySelector("#mobileNo").value = "";
+          window.location.assign("log-in.html");
+          alert("Sign Up Successful");
+        }
+      }
+</script> -->

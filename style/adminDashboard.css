@@ -16,7 +16,7 @@ body{
     height: 60px;
 }
 #user-logo{
-    margin-left: 80%;
+    margin-left: 81%;
     /* height: 3% */
 }
 #qs-image{
@@ -38,7 +38,7 @@ body{
     height: 30px;
     width: 80px;
     margin-left: 20px;
-    background-color: blue;
+    background-color: cornflowerblue;
     color: white;
     border: none;
     border-radius: 10px;
@@ -46,7 +46,7 @@ body{
 }
 #main-container{
     height: 600px;
-    width: 95%;
+    width: 100%;
     /* border: 1px solid red; */
     margin-left: 30px;
     display: flex;
@@ -58,37 +58,40 @@ body{
 }
 #all-buttons{
     height: 100%;
-    width: 20%;
+    width: 18%;
     border-right: 3px solid grey;
     margin-top: 70px;
     position: fixed;
+    /* border: 1px solid red; */
 }
 #show{
     height: 90%;
-    width: 75%;
+    width: 73%;
     /* border: 1px solid blue; */
-    margin-left: 25%;
+    margin-left: 23%;
     margin-top: 60px;
 }
 #all-buttons hr{
-    width: 80%;
-    border: 1px solid grey;
+    width: 100%;
+    border: 0.5px solid grey;
 }
 #all-buttons button{
-    height: 30px;
+    height: 40px;
     width: 80%;
-    margin: 10px 0px 10px 20px;
+    /* margin: 10px 0px 10px 20px; */
     border: none;
     background-color:white;
     color: black;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 7px;
     text-align: start;
+    transition: 0.5s;
+    
     
 }
 #all-buttons button:hover{
-    background-color:black;
+    background-color:rgb(51,51,51);
     color: white;
     cursor: pointer;
 }
@@ -101,7 +104,10 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
     margin: 10px;
+    margin-left: 0px;
     padding-bottom: 10px;
+    /* border: 1px solid black; */
+    line-height: 1.8ch;
 }
 #show-all-movies img{
     width: 100%;
@@ -122,30 +128,41 @@ body{
     width: 120px;
     margin-right: 50px;
     border-radius: 7px;
+    /* font-weight: 400; */
+    font-size: 15px;
 }
+/* #sorting-data option{
+    background-color: cornflowerblue;
+    color: white;
+} */
 #search{
     height: 30px;
     width: 200px;
     margin-right: 30px;
     border-radius: 7px;
+    font-size: 15px;
+    padding-left: 15px;
     
 }
 .edit-btn{
     margin-left: 10px;
-    background-color: skyblue;
+    background-color: cornflowerblue;
     height: 25px;
-    width: 40%;
+    width: 60px;
     border: none;
     border-radius: 7px;
+    color: white;
+    font-size: 15px;
 }
 .delete-btn{
-    margin-left: 30px;
+    margin-left: 70px;
     background-color: red;
     color: white;
     height: 25px;
     width: 80px;
     border-radius: 7px;
     border: none;
+    font-size: 15px;
 }
 
 
@@ -177,18 +194,21 @@ body{
 #input-form input[type="submit"]{
     width: 20%;
     margin-left: 42%;
-    background-color: #25725b;
+    background-color: cornflowerblue;
     border: none;
     color: white;
     margin-bottom: 30px;
+    font-size: 17px;
 }
 #edit-form input[type="submit"]{
     width: 20%;
     margin-left: 42%;
-    background-color: #25725b;
+    background-color: cornflowerblue;
     border: none;
     color: white;
     margin-bottom: 30px;
+    font-size: 17px;
+    
 }
 @media all and (min-width:768px) and (max-width:1024px){
     #main-container{

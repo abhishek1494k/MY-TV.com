@@ -1,10 +1,9 @@
 
- 
 let api = `https://639889b9044fa481d6a154f8.mockapi.io/user`;
 
 let right_sec = document.querySelector("#right_sec");
 
-let temp = []
+let temp = [];
 
 async function fetchuserdata() {
   try {
@@ -17,9 +16,9 @@ async function fetchuserdata() {
   }
   catch (error) {
     console.log("error")
+
   }
 }
-
 
 function renderDom(data) {
   
@@ -28,7 +27,7 @@ function renderDom(data) {
     .map((ele) => {
       // data.length = 10;
       return `
-      
+
  <div id="datadiv">
  <div class="img-name-email">
     <div><img src="${ele.image}" alt=""></div>
@@ -72,19 +71,25 @@ function renderDom(data) {
 }
 
 
-// delete function
+
 async function deleteitem(id) {
-  let res = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user/${id}`, {
-    method:'DELETE',
-  })
+  let res = await fetch(
+    `https://639889b9044fa481d6a154f8.mockapi.io/user/${id}`,
+    {
+      method: "DELETE",
+    }
+  );
   if (res.ok) {
-    alert("Deleted Sucessfully");
-    let respond = await fetch(`https://639889b9044fa481d6a154f8.mockapi.io/user`);
+    alert("✅User Deleted Sucessfully");
+    let respond = await fetch(
+      `https://639889b9044fa481d6a154f8.mockapi.io/user`
+    );
     let data = await respond.json();
     renderDom(data);
   }
 }
  
+
 
 // pagination functions
 
@@ -132,19 +137,19 @@ async function pagedata(i,limit) {
   }
   
 
-//   search function
 
 
-let search = document.getElementById("userSearch")
-search.addEventListener("input",user_search)
+let search = document.getElementById("userSearch");
+search.addEventListener("input", user_search);
 function user_search() {
-    search.innerHTML = null;
-    let latest = temp.filter(function (ele) {
-        return ele.name.toLowerCase().includes(search.value.toLowerCase());
-    });
-    // console.log(latest)
-    renderDom(latest);
+  search.innerHTML = null;
+  let latest = temp.filter(function (ele) {
+    return ele.name.toLowerCase().includes(search.value.toLowerCase());
+  });
+  // console.log(latest)
+  renderDom(latest);
 }
+
 
 
 
@@ -167,7 +172,8 @@ function userSort() {
   renderDom(temp)
 }
 
-//   onclick for admin panel
+
+
 
 let dash = document.getElementById("dash")
 dash.onclick=()=> {
@@ -178,3 +184,4 @@ let movies = document.getElementById("movies");
 movies.onclick = () => {
   window.location.href = 'adminDashboard.html';
 }
+

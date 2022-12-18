@@ -74,8 +74,8 @@ function getAscard(image,title,year,rating,id){
    <div>
       <img src="${image}" alt="">
       <h2>${title}</h2>
-      <p>Release Year:${year}</p>
-      <p>Rating:${rating}</p>
+      <p>Release Year:🕓${year}</p>
+      <p>Rating:💛${rating}</p>
      
       <button class="edit-btn" data-id=${id}>Edit</button>
       <button class="delete-btn" data-id=${id}>Delete</button>
@@ -140,7 +140,7 @@ addMoviesbtn.addEventListener("click",function(){
             },
             body : JSON.stringify(obj)
          })
-          alert("Movie Added to Database.")
+          alert("✅Movie Added to Database.")
          for(let i=0;i<inputForm.length-1;i++){
            inputForm[i].value =""
          }
@@ -154,7 +154,7 @@ async function deleteItem(id){
         method : "DELETE"
     })
     if(res.ok){
-        alert("item Deleted Sucessfully")
+        alert("❌Item Deleted Sucessfully")
         let refresh=await fetch("https://63986336044fa481d69b935b.mockapi.io/mytv")
         let data= await refresh.json()
         display(data)
@@ -191,10 +191,12 @@ async function editItem(id){
             body: JSON.stringify(obj)
         })
         if(editData.ok){
-            alert("movies data Edited Sucessfully.")
+            alert("🎊 Movies Data-Edited Sucessfully.")
             for(let i=0;i<editInputs.length-1;i++){
                 editInputs[i].value=""
             }
         }
     })
 }
+
+

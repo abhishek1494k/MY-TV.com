@@ -8,16 +8,14 @@
     <style>
         body{
             text-align: center;
-           
             background-image: linear-gradient(rgba(10, 10, 10, 0.851),rgba(10, 10, 10, 0.851)), url(./media/background.jpg);
             background-position: center;
             background-size: cover;
             position: relative;
-            
         }
         #login{
-            width: 20%;
-            height: 400px;
+            width: 50vh;
+            height: 55vh;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -32,10 +30,10 @@
             height: 40px;
             border-radius: 5px;
             border: 1px solid silver;
-            background-color: black;
+            background-color:rgb(52,52,52);
             color:silver;
             margin-top: 40px;
-            width: 85%;
+            width: 80%;
             padding: 0px 20px;
             font-size: 17px;
         }
@@ -46,15 +44,26 @@
         }
         a{
             color: red;
+            margin-left:10px;
         }
         h1{
-            color: #3c00a0;
+            color: #ffffff;
         }
         #sub{
-            width: 35%;
-            background-color: #3c00a0;
+            width: 30%;
+            background-color:cornflowerblue;
+            color:white;
+            height: 40px;
+            font-weight: 600;
+            transition:0.5s
         }
-
+        #sub:hover{
+            width: 32%;
+            height: 42px;
+            background-color:rgb(0, 89, 255);
+            color:white;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +76,7 @@
                 <input type="submit" value="Log In" id="sub">
             </form>
             <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+            <a href="./recoverPassword.html">Forgot Password ?</a>
         
     </div>
     
@@ -119,9 +129,9 @@ async function loginfun(event){
              });
              if(count>0){
                 window.location.assign("index.html")
-                alert("Sign Up Successful");
+                alert("✅ LogIn Successful");
              }else{
-                alert("Wrong Credentials")
+                alert("❌ Wrong Credentials")
              }
              document.querySelector("#email").value="";
              document.querySelector("#pass").value="";
