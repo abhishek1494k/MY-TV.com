@@ -50,6 +50,7 @@
         filter: brightness(90%);
         transition: 0.5s;
         margin: 10px;
+        color:white;
     }
     #tc2:hover{
         background-color: cornflowerblue;
