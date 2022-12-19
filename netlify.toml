@@ -1,4 +1,4 @@
 [[redirects]]
 from = "/*"
-to = "/stopwatch.html"
+to = "/index.html"
 status = 200
