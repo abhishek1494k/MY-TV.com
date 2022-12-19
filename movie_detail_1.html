@@ -417,11 +417,30 @@
       bag = out;
       display(out);
     } catch (error) {
-      alert("error");
     }
   }
   getdata();
+  
+  // let data2 = JSON.parse(localStorage.getItem("movie_detail"));
+  let url2 = "https://639889b9044fa481d6a154f8.mockapi.io/user";
+  let bag2 = [];
+  async function getdata2() {
+    try {
+      let res = await fetch(url2);
+      let out = await res.json();
+      bag2 = out;
+    } catch (error) {
+    }
+  }
+  getdata2();
+
+
   function display(bag) {
+    let a1 = bag[Math.floor(Math.random() * 30) + 1]
+    let b1 =bag[Math.floor(Math.random() * 30) + 1]
+    let c1 = bag[Math.floor(Math.random() * 30) + 1]
+    let d1=bag[Math.floor(Math.random() * 30) + 1]
+
     document.querySelector("body").innerHTML = `
   <div class="sub_container">
     <div id="new_navbar">
@@ -479,20 +498,20 @@
 
   <div id="sub_container3">
     <div>
-      <img src="${bag[Math.floor(Math.random() * 30) + 1].poster}" alt="">
+      <img id="a1" src="${a1.poster}" alt="">
     </div>
     <div>
-      <img
-        src="${bag[Math.floor(Math.random() * 30) + 1].poster}"
+      <img id="b1"
+        src="${b1.poster}"
         alt="">
     </div>
     <div>
-      <img
-        src="${bag[Math.floor(Math.random() * 30) + 1].poster}"
+      <img id="c1"
+        src="${c1.poster}"
         alt="">
     </div>
     <div>
-      <img src="${bag[Math.floor(Math.random() * 30) + 1].poster}" alt="">
+      <img id="d1" src="${d1.poster}" alt="">
     </div>
     <br>
   </div>
@@ -586,11 +605,28 @@
       addData(data);
       // window.location.href="wishlist.html"
     });
-    // document.getElementById("#sub_container3").addEventListener("click",()=>{
-    //         console.log("ABC");
-    //         localStorage.setItem("movie_detail",JSON.stringify(bag[Math.floor(Math.random() * 30) + 1].poster));
-    //         window.location.href="movie_detail_1.html";
-    //     })
+
+    document.getElementById("a1").addEventListener("click",function(){
+      localStorage.setItem("movie_detail",JSON.stringify(a1))
+      window.location.href="movie_detail_1.html";
+    })
+
+    document.getElementById("b1").addEventListener("click",function(){
+      localStorage.setItem("movie_detail",JSON.stringify(b1))
+      window.location.href="movie_detail_1.html";
+    })
+
+    document.getElementById("c1").addEventListener("click",function(){
+      localStorage.setItem("movie_detail",JSON.stringify(c1))
+      window.location.href="movie_detail_1.html";
+    })
+
+    document.getElementById("d1").addEventListener("click",function(){
+      localStorage.setItem("movie_detail",JSON.stringify(d1))
+      window.location.href="movie_detail_1.html";
+    })
+
+    display2()
   }
 
   function addData(elem) {
@@ -617,5 +653,9 @@
   }
 
 
-
+function display2(){
+    let img = document.createElement("img")
+    img.setAttribute("src",`${bag2[bag2.length-1].image}`)
+    document.getElementById("search_login").append(img)
+}
 </script>
