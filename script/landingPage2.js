@@ -227,9 +227,36 @@ if(count<out.length){
 
 function display2(){
     let img = document.createElement("img")
-    img.setAttribute("src",`${bag2[bag2.length-1].image}`)
-    document.getElementById("search_login").append(img)
+    let name=document.createElement("h6")
+    let cross=document.createElement("p")
+
+    if(bag2[bag2.length-1].name=="Abhishek"){
+        img.setAttribute("src",`${bag2[bag2.length-1].image}`)
+    } else {
+        img.setAttribute("src","https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/695.jpg")
+    }
+
+
+    img.style.cursor="grab"
+    name.innerText=`${bag2[bag2.length-1].name}`;
+    name.style.display="none";
+    cross.innerText="➕"
+    cross.style.cursor="grab"
+
+    document.getElementById("search_login").append(img,name,cross)
+
+    document.querySelector("#search_login img").addEventListener("click",()=>{
+        let nameDisplay=document.querySelector("#search_login h6")
+        nameDisplay.style.display="block"
+    })
+
+    document.querySelector("#search_login p").addEventListener("click",()=>{
+        let nameDisplay=document.querySelector("#search_login h6")
+        nameDisplay.style.display="none"
+    })
 }
+
+
 
 
 
