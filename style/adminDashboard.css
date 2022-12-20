@@ -44,6 +44,15 @@ body{
     border-radius: 10px;
     font-size: 15px;
 }
+
+#logout:hover{
+    height: 35px;
+    width: 85px;
+    background-color: rgb(0, 89, 255);
+    font-size: 20px;
+    cursor: grab;
+}
+
 #main-container{
     height: 600px;
     width: 100%;

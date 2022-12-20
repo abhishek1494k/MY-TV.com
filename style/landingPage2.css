@@ -64,8 +64,9 @@
   width:103%;
   height:103%;
   filter:brightness(100%);
-  transition: 0.5s;
+  transition: 0.3s;
   border:2px solid white;
+  cursor: grab;
   /* border-bottom:3px solid white;
   border-top: 3px solid white; */
 }
