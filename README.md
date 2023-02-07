@@ -1,5 +1,5 @@
-# brainy-sidewalk-2900
-www.appletv.com / CW_JS201_B21
+Netlify Link - https://mytv-com.netlify.app/
+Website Link - www.appletv.com /
 
 ![image](https://user-images.githubusercontent.com/112754448/208704852-32f530c8-82de-4b84-84bf-d9f2f7b5760f.png)
 ![image](https://user-images.githubusercontent.com/112754448/208704915-1bde5115-c3b6-41b7-8833-fd4acc39a892.png)
