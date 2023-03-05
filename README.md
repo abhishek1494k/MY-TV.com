@@ -1,5 +1,36 @@
-Netlify Link - https://mytv-com.netlify.app/ <br>
-Website Link - www.appletv.com /
+<div align="center" > 
+<h2>MY>TV.com<h2>
+<img width="30%" src="https://drive.google.com/file/d/1jq1aDT-7omLxGufbOlxVHC8y0sg7GLGt/view?usp=sharing"><br><br>
+
+Frontend Link QR Code: https://mytv-com.netlify.app/ <br>
+Website Link - www.appletv.com /<br>
+</div>
+
+<h2>Techstack : </h2>
+HTML,CSS,Javascript (Frontend) <br>
+Font awesome (Library) <br>
+    
+<h2>To run QR Code Analyser: </h2>
+<kbd><br>
+<p style=border:"thin" >Clone this Repository and Open Frontend/index.html on liveserver</p>
+</kbd>
+    <br>
+    <h2>Routes : </h2>
+    
+    USER LOGIN :    /login
+    USER SIGNUP:    /signup
+    LOGOUT:         /logout
+    REFRESH TOKEN:  /refresh
+    ADMIN PANEL:    user/detail
+    BLOCK USER:     user/block
+    SEE BLOCKED 
+    USERS:          user/block/details
+    UNBLOCK USER:   user/unblock
+    DELETE USER:    user/delete
+    QR DETAILS:     qr/post
+    
+  <h1>1.  Home Page  </h1><br><br>
+
 
 ![image](https://user-images.githubusercontent.com/112754448/208704852-32f530c8-82de-4b84-84bf-d9f2f7b5760f.png)
 ![image](https://user-images.githubusercontent.com/112754448/208704915-1bde5115-c3b6-41b7-8833-fd4acc39a892.png)
