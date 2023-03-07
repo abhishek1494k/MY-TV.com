@@ -50,3 +50,5 @@ Website Link - www.appletv.com<br>
 ![image](https://user-images.githubusercontent.com/112754448/208706976-e7fed698-fbce-4779-82cc-a40b0e3d531f.png)
 ![image](https://user-images.githubusercontent.com/112754448/208707039-d1afa69b-2113-4c20-8d80-6d7b3a23ddd9.png)
 ![image](https://user-images.githubusercontent.com/112754448/208707081-5841fde1-a384-4e4c-81dc-517a1e806cf2.png)
+
+Asmin Panel Credentials - admin / 1234
