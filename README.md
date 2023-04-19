@@ -1,9 +1,8 @@
 <div align="center" > 
 <h2>MY>TV.com<h2>
-<img width="30%" src="https://user-images.githubusercontent.com/112754448/222979842-4794350a-1722-4528-8397-d0e2f9dbe3a3.png"><br><br>
+<img width="20%" src="https://user-images.githubusercontent.com/112754448/222979842-4794350a-1722-4528-8397-d0e2f9dbe3a3.png"><br><br>
 
 Frontend Link QR Code: https://mytv-com.netlify.app<br>
-Website Link - www.appletv.com<br>
 </div>
 
 <h2>Techstack : </h2>
